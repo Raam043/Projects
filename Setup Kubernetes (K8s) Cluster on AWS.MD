@@ -4,13 +4,19 @@
 
 ## Install AWS CLI on ubuntu server
 '''sh
+
 sudo apt update -y
+
 sudo apt install unzip python3
+
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
 unzip awscliv2.zip
+
 sudo ./aws/install
 
 aws --version
+
 '''
 
 
