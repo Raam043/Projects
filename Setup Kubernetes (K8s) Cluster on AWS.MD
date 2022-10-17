@@ -43,11 +43,11 @@ sudo mv kops-linux-amd64 /usr/local/bin/kops
 
 aws configure
 
->>Output key in<<
-AWS Access Key ID [None]:
-AWS Secret Access Key [None]:
-Default region name [None]: us-east-2
-Default output format [None]:
+Output key in:
+* AWS Access Key ID [None]:
+* AWS Secret Access Key [None]:
+* Default region name [None]: us-east-2
+* Default output format [None]:
 
 aws s3 ls
 
@@ -86,12 +86,17 @@ Suggestions:
 kops edit ig --name=saikrishnar.net master-us-east-2b
 
 > edit machine type to "t2.micro" & save 
+
 > run below command 
+
 kops update cluster --name saikrishnar.net --yes --admin
 
 kops validate cluster
-> for validate the master 
+
+> for validate the master
+ 
 kops update cluster
+
 > for update the master
 
 
