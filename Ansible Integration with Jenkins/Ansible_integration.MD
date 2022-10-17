@@ -4,7 +4,7 @@
 
 ### Prerequisites:
 1. Ansible server **[Installation steps](https://github.com/Raam043/Applications-Installation/blob/main/Ansible/Install-Config_steps)**
-2. Jenkins Server 
+2. Jenkins Server **[Installation steps](https://github.com/Raam043/Applications-Installation/blob/main/Jenkins/Installation%20commands)**
 
 ### Integration Setps
 
