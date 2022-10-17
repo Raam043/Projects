@@ -13,7 +13,7 @@ Maven is a code build tool which used to convert your code to an artifact. this 
     yum install java -y
     OR
     apt-get install java -y
-    '''
+    ```
 #### Install Maven on Jenkins
 1. Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case, I am using /opt/maven as my installation directory
  - Link : https://maven.apache.org/download.cgi
@@ -50,3 +50,4 @@ So far we have completed the installation of maven software to support maven plu
 
 2. Configure maven path
   - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
+  - - `Manage Jenkins` > `Global Tool Configuration` > `java`
