@@ -3,7 +3,7 @@
 ## Releasse k8s ubuntu serrver then connecct to MobXterm and follow below commands to install k8s
 
 ## Install AWS CLI on ubuntu server
-'''sh
+''sh
 
 sudo apt update -y
 
@@ -17,7 +17,7 @@ sudo ./aws/install
 
 aws --version
 
-'''
+''
 
 
 ## Install kubernetes "kubctl" on ubuntu server and move it to local bin (/usr/local/bin/kubectl)
