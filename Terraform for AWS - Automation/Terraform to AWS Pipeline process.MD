@@ -12,17 +12,21 @@ Refer the repo **[Terrafom automation](https://github.com/Raam043/Git-jenkins-te
 
 ## Run below commands on jenkins / terraform server
 
-'''sh
+
 wget https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_amd64.zip
-'''
+
 
 unzip terraform_1.3.2_linux_amd64.zip
 
+
 mv terraform /usr/bin/
+
 
 terraform --version
 
+
 ## Run Jenkins and download the "Terraform" plugin on jenkins
+
 
 ## Set the Global tool configuration setting for Terraform > Terraform > name = terraform-11 path = /usr/bin/
 
