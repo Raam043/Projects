@@ -4,19 +4,25 @@ Prerequisition:
 Refer the repo **[Terrafom automation](https://github.com/Raam043/Git-jenkins-terraform-aws_infra)** for reference 
 
 ## Install the terraform application on terraform server
+
 ## Download the zip file for installa teraform on server
+
 ## https://www.terraform.io/downloads
 
 
-run below commands on jenkins / terraform server
+## Run below commands on jenkins / terraform server
+
 wget https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_amd64.zip
-ls
+
+
 unzip terraform_1.3.2_linux_amd64.zip
-ls
+
 mv terraform /usr/bin/
+
 terraform --version
 
 ## Run Jenkins and download the "Terraform" plugin on jenkins
+
 ## Set the Global tool configuration setting for Terraform > Terraform > name = terraform-11 path = /usr/bin/
 
 
