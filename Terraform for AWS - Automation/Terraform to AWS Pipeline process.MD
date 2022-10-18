@@ -11,9 +11,9 @@ Refer the repo **[Terrafom automation](https://github.com/Raam043/Git-jenkins-te
 
 
 ## Run below commands on jenkins / terraform server
-
+'''sh
 wget https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_amd64.zip
-
+'''
 
 unzip terraform_1.3.2_linux_amd64.zip
 
