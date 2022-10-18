@@ -52,3 +52,7 @@ pipeline {
     }
 }
 _______________________________________________________________________________
+
+Save and build project 
+
+Check the Aws VPC console for confirmation 
