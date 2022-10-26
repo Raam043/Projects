@@ -1,18 +1,19 @@
 Prerequisition:
 1. Jenkin server
 2. Git repo with Terraform configuration files ( main.tf / test.tfvars / variables.tf)
+
 Refer the repo **[Terraform automation](https://github.com/Raam043/Git-jenkins-terraform-aws_infra)** for reference 
 
-## Install the terraform application on terraform server
+Install the terraform application on terraform server
 
-## Download the zip file for installa teraform on server
+Download the zip file for installa teraform on server
 
-## https://www.terraform.io/downloads
-
-
-## Run below commands on jenkins / terraform server
+https://www.terraform.io/downloads
 
 
+Run below commands on jenkins / terraform server
+
+```sh
 wget https://releases.hashicorp.com/terraform/1.3.2/terraform_1.3.2_linux_amd64.zip
 
 
@@ -23,18 +24,18 @@ mv terraform /usr/bin/
 
 
 terraform --version
+```
+
+Run Jenkins and download the "Terraform" plugin on jenkins
 
 
-## Run Jenkins and download the "Terraform" plugin on jenkins
-
-
-## Set the Global tool configuration setting for Terraform > Terraform > name = terraform-11 path = /usr/bin/
+Set the Global tool configuration setting for Terraform > Terraform > name = terraform-11 path = /usr/bin/
 
 
 
-## Create new Pipeline project and add below script for run the terraform.
+# Create new Pipeline project and add below script for run the terraform.
 
-___________________________________________________________________________________
+```sh
 pipeline {
     agent any
      tools {
@@ -63,7 +64,8 @@ pipeline {
         }
     }
 }
-_______________________________________________________________________________
+
+```
 
 Save and build project 
 
