@@ -73,7 +73,7 @@ Check the Aws VPC console for confirmation
 
 Add `ec2.tf`, `s3.tf`, `sns.tf` & etc .... for further services execution
 
-To delete ec2 instances add 'pipeline script as shown below'
+To delete vpc add 'pipeline script as shown below'
 ```sh
         stage('Terraform apply') {
             steps {
