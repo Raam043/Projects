@@ -52,3 +52,18 @@ Copy all nodes private ip and paste on **[nodes.inv](https://github.com/Raam043/
 Now open jenkins and create pipeline project
 
 Please refer the below script 
+
+
+
+
+
+For adding DockerHub credentials please follow below steps
+Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "Docker-pp" > add Credentials = using jenkins Credentials 
+select `Secrete text` add Password on text field save and generate script
+
+ouput
+withCredentials([string(credentialsId: 'Docker-pp', variable: 'Docker-pp')]) {
+    // some block
+}
+
+remove "some block line item and paste on pipeline script
