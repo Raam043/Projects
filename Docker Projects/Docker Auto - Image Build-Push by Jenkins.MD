@@ -1,5 +1,6 @@
 Prerequisites:
-1. EC2 instance with Docker and Jenkins installed 
+1. Master EC2 instance with Docker,Jenkins and Ansible installed (SSH key configuration)
+2. Nodes with docker installed (copy of master ssh id.rsa.pub on all nodes)
 
 
 # Install Docker
