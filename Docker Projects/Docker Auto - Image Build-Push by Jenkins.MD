@@ -25,7 +25,7 @@ systemctl enable jenkins
 systemctl start jenkins
 ```
 
-# Install Ansibble 
+# Install Ansible 
 ```sh
 amazon-linux-extras install ansible2 -y
 ```
@@ -33,4 +33,10 @@ amazon-linux-extras install ansible2 -y
 # Install Git
 ```sh
 yum install git -y
+```
+
+SSH key generation on master and copy to all nodes
+
+```sh
+ssh-keygen
 ```
