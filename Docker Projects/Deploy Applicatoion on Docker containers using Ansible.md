@@ -102,3 +102,46 @@ withCredentials([string(credentialsId: 'Docker-pp', variable: 'Docker-pp')]) {
 }
 
 remove "some block line item and paste on pipeline script
+
+Save and run the job.
+
+
+
+`Dockerfile`
+```sh
+FROM httpd
+COPY index.html /usr/local/apache2/htdocs
+EXPOSE 80
+```
+
+
+`nodes.inv`
+```sh
+[rnb]
+172.31.35.232 ansible_user=ec2-user
+172.31.39.215 ansible_user=ec2-user
+```
+
+`httpd_container.yml`
+```sh
+---
+- hosts: rnb
+  become: True
+  tasks:
+        
+    - name: Run docker container
+      command: "docker stop raam043/test_project:latest"
+      command: "docker rm -f raam043/test_project:latest"
+      command: "docker image rm -f raam043/test_project:latest"
+      
+    - name: Run docker container
+      docker_container:
+        name: WebServer
+        image: raam043/test_project:latest
+        state: started
+        exposed_ports:
+        - "80"
+        ports:
+        - "80:80"
+ ```
+ 
