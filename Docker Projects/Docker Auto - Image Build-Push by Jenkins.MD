@@ -1,6 +1,7 @@
 Prerequisites:
 1. Master EC2 instance with Docker,Jenkins and Ansible installed (SSH key configuration)
 2. Nodes with docker installed (copy of master ssh id.rsa.pub on all nodes)
+3. Git Repo with Dockerfile, Application file and Anisble yaml file
 
 
 # Install Docker
@@ -40,3 +41,4 @@ SSH key generation on master and copy to all nodes
 ```sh
 ssh-keygen
 ```
+Copy the id.rsa.pub to node and make AMI to release more servers
