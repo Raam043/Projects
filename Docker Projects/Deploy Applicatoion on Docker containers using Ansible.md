@@ -1,6 +1,6 @@
 Prerequisites:
 1. Master EC2 instance with Docker,Jenkins and Ansible installed (SSH key configuration)
-2. Nodes with docker installed (copy of master ssh id.rsa.pub on all nodes)
+2. Nodes with docker+pip installed (copy of master ssh id.rsa.pub on all nodes)
 3. Git Repo with Dockerfile, Application file, Anisble yaml amd nodes inverntory files
 
 
@@ -52,10 +52,45 @@ Copy all nodes private ip and paste on **[nodes.inv](https://github.com/Raam043/
 Now open jenkins and create pipeline project
 
 Please refer the below script 
+```sh
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/Jenkins-project-test.git'
+            }
+        }
+        stage('Docker image Build') {
+            steps {
+                sh 'docker stop docker_ramesh'
+                sh 'docker rm -f docker_ramesh'
+                sh 'docker image rm -f docker_ramesh'
+                sh 'docker build -t docker_ramesh .'
+            }
+        }
+        stage('Docker Conatiner run') {
+            steps {
+                sh 'docker run -d --name docker_ramesh -p 80:80 docker_ramesh'
+                sh 'docker tag docker_ramesh raam043/test_project:latest'
+            }
+        }
+        stage('Image push to DockerHub & Deploying on Ansible nodes') {
+            steps {
+                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
+                    sh 'docker login -u raam043 -p ${DP}'
+                    sh 'docker push raam043/test_project:latest'
+                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
+            }
+        }
+        }
+    }
+}
 
 
-
-
+```
 
 For adding DockerHub credentials please follow below steps
 Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "Docker-pp" > add Credentials = using jenkins Credentials 
