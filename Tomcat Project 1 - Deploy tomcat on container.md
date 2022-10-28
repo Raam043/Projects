@@ -67,6 +67,17 @@ Download the `Deploy to container` Plug-in (Manage Jenkins > Plugin Manager > se
 
 Now Create Freestyle Project
 
+`Source Code Management`= Git
+
+Repo = https://github.com/Raam043/CICD-GiT-Jenkins-Maven-Docker-Tomcat.git 
+
+Branch = main
+
+
+`Build Triggers`= Poll SCM 
+
+Schedule = * * * * *
+
 
 
 
