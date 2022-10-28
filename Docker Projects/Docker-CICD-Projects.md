@@ -106,7 +106,35 @@ add `index.html` to repo
 
 Create pipeline project with Poll SCM trigger
 
-`Pipeline Script`
+`Pipeline Script 1st time`
+```sh
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/Test-project.git'
+            }
+        }
+        stage('Docker Image Build') {
+            steps {
+                sh 'docker build -t myapp .'
+            }
+        }
+        stage('Docker Run Container') {
+            steps {
+                sh 'docker run --name myapp -d -p 80:80 myapp'
+            }
+        }
+        
+    }
+}
+```
+
+
+`Pipeline Script 2nd and continue to build jobs`
+
 ```sh
 pipeline {
     agent any
