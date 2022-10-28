@@ -41,6 +41,7 @@ yum install git -y
 Run Jenkins application on :8080 port and setup the profile
 
 Create project repo on GitHub with `index.html`
+In my case i have used repo https://github.com/Raam043/Docker-CICD.git
 
 Create freestyle project with Poll SCM trigger
 Select Build steps "Execute shell"
