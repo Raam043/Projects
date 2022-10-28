@@ -20,6 +20,7 @@ sudo chmod 666 /var/run/docker.sock
 usermod -aG docker ec2-user
 chown -R ec2-user:ec2-user /root/
 chown -R ec2-user:ec2-user /opt/
+mkdir /opt/docker
 ```
 
 Create Docker User and password ( it will be used on jenkins ssh connection)
@@ -111,7 +112,7 @@ Branch = main
 Schedule = * * * * *
 
 
-`Build Steps`= Send files or execute commands over SSH
+`Pre Steps`= Send files or execute commands over SSH
 
 Server name = Docker ( Drop down from jenkins setting)
 
@@ -131,7 +132,10 @@ docker build -t docker_ramesh
 docker run -d --name docker_ramesh -p 8090:8080 docker_ramesh
 ```
 
+`BUILD` = 
+Root POM = pom.xml
 
+Goals and options = ""
 
 
 
