@@ -42,6 +42,10 @@ docker cp index.html tomcat:/usr/local/tomcat/webapps/RRR
 docker pull nginx
 docker run --name nginx -d -p 80:80 nginx
 docker cp index.html nginx:/usr/share/nginx/html/
+
+docker pull httpd
+docker run --name httpd -d -p 443:80 httpd
+docker cp index.html httpd:/usr/local/apache2/htdocs
 ```
 
 Script for 2nd run + Continuous 
@@ -57,6 +61,12 @@ docker stop nginx
 docker rm -f nginx
 docker run --name nginx -d -p 80:80 nginx
 docker cp index.html nginx:/usr/share/nginx/html/
+
+docker pull httpd
+docker stop httpd
+docker rm -f httpd
+docker run --name httpd -d -p 443:80 httpd
+docker cp index.html httpd:/usr/local/apache2/htdocs
 ```
 
 Successfully Build your project👍😍
