@@ -49,7 +49,7 @@ service sshd restart
 ```
 
 
-## Install Jenkins on `Server 2`
+## Install Jenkins + Maven on `Server 2`
 ```sh
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -60,25 +60,44 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 yum install git -y
+cd /opt
+mkdir maven
+cd maven
+wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
+chmod 777 apache-maven-3.8.6-bin.tar.gz
+tar -xzvf apache-maven-3.8.6-bin.tar.gz
+
 ```
 Open jenkins Application (Server 2 _ ip:8080)
 
-Download the `Deploy to container` & `Publish over ssh` Plug-in (Manage Jenkins > Plugin Manager > search the plugins and install it without restart)
+Download the the below plugins (Manage Jenkins > Plugin Manager > search the plugins and install it without restart)
+`Deploy to container` 
+`Publish over ssh`
+`Maven Integration`
+`Maven Invoker`
+
 
 Go to `Manage Jenkins` > `Configure System` > `SSH Server` 
 
 Name = docker
-Hostname = Docker server "Private IP" address ( Server 1)
+
+Hostname = Docker server "Public IP address" ( Server 1)
+
 User Name = ramesh    (docker user id and password which created on docker server 1)
+
 Passphrase / Password = "password"
 
-Click on Test connection
+Click on Test connection ( If failed check sshd config OR set visudo with docker user)
+
+Go to `Manage Jenkins` > Global tool configuration > set java and maven home directory
+
+java = /usr/lib/jvm/java-11-openjdk-11.0.16.0.8-1.amzn2.0.1.x86_64
+
+maven = /opt/maven/apache-maven-3.8.6
 
 
 
-
-
-Now Create Freestyle Project
+Now Create Maven Project
 
 `Source Code Management`= Git
 
@@ -92,7 +111,26 @@ Branch = main
 Schedule = * * * * *
 
 
-`Post-build Actions`= Build Steps
+`Build Steps`= Send files or execute commands over SSH
+
+Server name = Docker ( Drop down from jenkins setting)
+
+Sourche file = webapp/target/*.war
+
+Remove prefix = webapp/target/
+
+Remote directory = //opt//docker
+
+Exec command = 
+```sh
+docker stop docker_ramesh
+docker rm -f docker_ramesh
+docker image rm -f docker_ramesh
+cd /opt/docker
+docker build -t docker_ramesh
+docker run -d --name docker_ramesh -p 8090:8080 docker_ramesh
+```
+
 
 
 
