@@ -33,10 +33,13 @@ Set ssh setting to enable passwordless connection from jenkins
 vi /etc/ssh/sshd_config
 ```
 Change the setting as per below
+
 `Before`
+
 ![image](https://user-images.githubusercontent.com/111989928/198711105-0672a166-bf18-4922-a0dd-074bf7f75f8d.png)
 
 `After`
+
 ![image](https://user-images.githubusercontent.com/111989928/198711366-3b7384d3-e18c-42c4-b966-149aeaefbcd6.png)
 
 
