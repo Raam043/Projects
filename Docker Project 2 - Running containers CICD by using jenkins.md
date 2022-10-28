@@ -1,4 +1,4 @@
-## Project :- Running containers by using jenkins pipeline
+## Project :- Running containers by using jenkins pipeline (Deploying application on containers directly)
 
 # Project Map
 ![Project Map](https://user-images.githubusercontent.com/111989928/198692998-c40d170d-8d66-4e12-9454-08f01bb592a8.png)
