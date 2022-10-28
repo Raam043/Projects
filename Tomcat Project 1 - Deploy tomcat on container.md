@@ -63,7 +63,20 @@ yum install git -y
 ```
 Open jenkins Application (Server 2 _ ip:8080)
 
-Download the `Deploy to container` Plug-in (Manage Jenkins > Plugin Manager > search the plugin and install it without restart)
+Download the `Deploy to container` & `Publish over ssh` Plug-in (Manage Jenkins > Plugin Manager > search the plugins and install it without restart)
+
+Go to `Manage Jenkins` > `Configure System` > `SSH Server` 
+
+Name = docker
+Hostname = Docker server "Private IP" address ( Server 1)
+User Name = ramesh    (docker user id and password which created on docker server 1)
+Passphrase / Password = "password"
+
+Click on Test connection
+
+
+
+
 
 Now Create Freestyle Project
 
@@ -79,6 +92,7 @@ Branch = main
 Schedule = * * * * *
 
 
+`Post-build Actions`= Build Steps
 
 
 
@@ -88,13 +102,8 @@ Schedule = * * * * *
 
 
 
-Go to `Manage Jenkins` > `Configure System` > `SSH Server` 
-Name = docker
-Hostname = Docker server "Private IP" address ( Server 1)
-User Name = ramesh    (docker user id and password which created on docker server 1)
-Passphrase / Password = "password"
 
-Click on Test connection
+
 
 
 
