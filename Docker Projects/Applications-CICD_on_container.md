@@ -1,3 +1,6 @@
+![Project Map](https://user-images.githubusercontent.com/111989928/198687632-2a470df2-8dfe-42ca-ad45-e24b2e495635.png)
+
+
 Deploying application on direct container
 
 #Install Docker
