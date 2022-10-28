@@ -42,7 +42,9 @@ Run Jenkins application on :8080 port and setup the profile
 
 Create project repo on GitHub with `index.html`
 
-Create pipeline project with Poll SCM trigger
+Create freestyle project with Poll SCM trigger
+Select Build steps "Execute shell"
+Follow the below steps to run job smoothly
 
 Script for 1st run
 ```sh
