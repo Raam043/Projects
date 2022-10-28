@@ -100,6 +100,7 @@ yum install git -y
 Run Jenkins application on :8080 port and setup the profile
 
 Create project repo on GitHub
+In my case i have used repo https://github.com/Raam043/Docker-CICD.git
 
 Add new file = `Dockerfile`
 ```sh
@@ -108,6 +109,7 @@ COPY index.html /usr/share/nginx/html/
 EXPOSE 80
 ```
 add `index.html` to repo
+
 
 Create pipeline project with Poll SCM trigger
 
