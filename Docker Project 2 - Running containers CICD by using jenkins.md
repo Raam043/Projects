@@ -1,7 +1,8 @@
 ## Project :- Running containers by using jenkins pipeline (Deploying application on containers directly)
 
 # Project Map
-![Project Map](https://user-images.githubusercontent.com/111989928/198692998-c40d170d-8d66-4e12-9454-08f01bb592a8.png)
+![Project Map](https://user-images.githubusercontent.com/111989928/198704452-61a88f68-ad64-4d0e-8eda-5b3a47fd09cc.png)
+
 
 
 
