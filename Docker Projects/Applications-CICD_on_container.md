@@ -1,4 +1,5 @@
-![Project Map](https://user-images.githubusercontent.com/111989928/198687632-2a470df2-8dfe-42ca-ad45-e24b2e495635.png)
+![Project Map](https://user-images.githubusercontent.com/111989928/198688137-5b148eba-a8f8-4982-a253-356f3adeeefe.png)
+
 
 
 Deploying application on direct container
