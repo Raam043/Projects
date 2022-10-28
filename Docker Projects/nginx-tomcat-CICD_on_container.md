@@ -59,4 +59,4 @@ docker run --name nginx -d -p 80:80 nginx
 docker cp index.html nginx:/usr/share/nginx/html/
 ```
 
-Successfully Builded your project👍😍
+Successfully Build your project👍😍
