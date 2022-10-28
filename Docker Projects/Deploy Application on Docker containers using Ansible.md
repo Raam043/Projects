@@ -1,4 +1,6 @@
-![Project map](https://user-images.githubusercontent.com/111989928/198539260-5163763e-4ab0-4b7c-8bcc-12c8d8d055a4.png)
+# Project Map
+![Project Map](https://user-images.githubusercontent.com/111989928/198696150-0ec910dc-096f-402e-8917-2c719133825e.png)
+
 
 
 
