@@ -106,7 +106,7 @@ add `index.html` to repo
 
 Create pipeline project with Poll SCM trigger
 
-`Pipeline Script 1st time`
+`Pipeline Script 1st time run`
 ```sh
 pipeline {
     agent any
