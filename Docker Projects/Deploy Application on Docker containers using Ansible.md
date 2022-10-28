@@ -55,7 +55,7 @@ Copy the id.rsa.pub to node and make AMI to release more servers
 Copy all nodes private ip and paste on **[nodes.inv](https://github.com/Raam043/CICD_Project-Deploy_Webapp_to_docker_containers_using_Ansible-LINUX/blob/2360cc582c9fe661424b4dde6e6ffb77d44c3547/nodes.inv)**
 Now open jenkins add plugins `Ansible` set the path as "/usr/bin" at Global tools configuration setting
 
-Create pipeline project
+Create pipeline project with Build Triggers as Poll SCM "* * * * *"
 
 Please refer the below script 
 ```sh
