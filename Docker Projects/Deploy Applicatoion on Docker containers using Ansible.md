@@ -1,4 +1,5 @@
-![](https://github.com/Raam043/Projects/blob/main/Docker%20Projects/Pictures/Project%20map.png)
+![Project map](https://user-images.githubusercontent.com/111989928/198539260-5163763e-4ab0-4b7c-8bcc-12c8d8d055a4.png)
+
 
 
 Prerequisites:
