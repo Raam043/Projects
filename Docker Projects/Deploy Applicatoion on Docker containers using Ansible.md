@@ -1,3 +1,6 @@
+![](https://github.com/Raam043/Projects/blob/main/Docker%20Projects/Pictures/Project%20map.png)
+
+
 Prerequisites:
 1. Master EC2 instance with Docker,Jenkins and Ansible installed (SSH key configuration)
 2. Nodes with docker+pip installed (copy of master ssh id.rsa.pub on all nodes)
