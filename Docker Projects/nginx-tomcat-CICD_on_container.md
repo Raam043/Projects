@@ -29,4 +29,34 @@ yum install git -y
 
 Run Jenkins application on :8080 port and setup the profile
 
-Create project repo on GitHub
+Create project repo on GitHub with `index.html`
+
+Create pipeline project with Poll SCM trigger
+
+Script for 1st run
+```sh
+docker pull raam043/tomcat
+docker run --name tomcat -d -p 8090:8080 raam043/tomcat
+docker cp index.html tomcat:/usr/local/tomcat/webapps/RRR
+
+docker pull nginx
+docker run --name nginx -d -p 80:80 nginx
+docker cp index.html nginx:/usr/share/nginx/html/
+```
+
+Script for 2nd run + Continuous 
+```sh
+docker pull raam043/tomcat
+docker stop tomcat
+docker rm -f tomcat
+docker run --name tomcat -d -p 8090:8080 raam043/tomcat
+docker cp index.html tomcat:/usr/local/tomcat/webapps/RRR
+
+docker pull nginx
+docker stop nginx
+docker rm -f nginx
+docker run --name nginx -d -p 80:80 nginx
+docker cp index.html nginx:/usr/share/nginx/html/
+```
+
+Successfully Builded your project👍😍
