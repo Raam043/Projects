@@ -1,4 +1,4 @@
-## 1 Docker Installation - Pull Image and Run Containers
+## 1 Docker Installation - Pull Images and Run Containers
 Release Linux server and install docker 
 
 ```sh
