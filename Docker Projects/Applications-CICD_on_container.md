@@ -1,12 +1,13 @@
-Project Map
-![Project Map](https://user-images.githubusercontent.com/111989928/198692285-9cd211ea-7091-475d-812c-c1c3faefd33e.png)
+# Project Map
+![Project Map](https://user-images.githubusercontent.com/111989928/198692793-497f74be-5e3a-41e0-a802-0e22d113f841.png)
+
 
 
 
 
 Deploying application on direct container
 
-#Install Docker
+# Install Docker
 ```sh
 yum udpate -y
 yum install docker -y
