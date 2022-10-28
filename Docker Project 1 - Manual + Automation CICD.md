@@ -2,7 +2,7 @@
 
 
 
-## 1 Docker Installation - Pull Images and Run Containers
+# 1 Docker Installation - Pull Images and Run Containers
 
 Release Linux server and install docker 
 
@@ -79,7 +79,7 @@ docker rmi <image_name> OR <image_id>
 ```
 
 
-## 2 Docker CICD - using Jenkins Application
+# 2 Docker CICD - using Jenkins Application
 
 Prerequisition:
 1. Docker installed server
