@@ -22,7 +22,7 @@ chown -R ec2-user:ec2-user /root/
 chown -R ec2-user:ec2-user /opt/
 ```
 
-Create Docker User and password 
+Create Docker User and password ( it will be used on jenkins ssh connection)
 ```sh
 useradd ramesh
 passwd ramesh
@@ -42,6 +42,12 @@ Change the setting as per below
 
 ![image](https://user-images.githubusercontent.com/111989928/198711366-3b7384d3-e18c-42c4-b966-149aeaefbcd6.png)
 
+Edit and Save 
+
+```sh
+service sshd restart
+```
+
 
 ## Install Jenkins on `Server 2`
 ```sh
@@ -55,8 +61,29 @@ systemctl enable jenkins
 systemctl start jenkins
 yum install git -y
 ```
+Open jenkins Application (Server 2 _ ip:8080)
+
+Download the `Deploy to container` Plug-in (Manage Jenkins > Plugin Manager > search the plugin and install it without restart)
+
+Now Create Freestyle Project
 
 
+
+
+
+
+
+
+
+
+
+Go to `Manage Jenkins` > `Configure System` > `SSH Server` 
+Name = docker
+Hostname = Docker server "Private IP" address ( Server 1)
+User Name = ramesh    (docker user id and password which created on docker server 1)
+Passphrase / Password = "password"
+
+Click on Test connection
 
 
 
