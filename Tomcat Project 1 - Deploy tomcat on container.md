@@ -10,7 +10,7 @@ make sure below ports are open on the both servers
 
 ## Install Docker on `Server 1`
 ```sh
-yum udpate -y
+yum update -y
 yum install docker -y
 systemctl enable docker
 systemctl start docker
