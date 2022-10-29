@@ -35,7 +35,8 @@ vi /etc/ssh/sshd_config
 ```
 Change the setting as per below
 ```diff
-`Before` text in red
+Before - text in red
+
 ```
 ![image](https://user-images.githubusercontent.com/111989928/198711105-0672a166-bf18-4922-a0dd-074bf7f75f8d.png)
 
