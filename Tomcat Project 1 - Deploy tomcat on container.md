@@ -92,12 +92,6 @@ Click on Test connection ( If failed check sshd config OR set visudo with docker
 
 
 
-Go to `Manage Jenkins` > Global tool configuration > set java and maven home directory
-
-java = /usr/lib/jvm/java-11-openjdk-11.0.16.0.8-1.amzn2.0.1.x86_64
-
-![image](https://user-images.githubusercontent.com/111989928/198826027-0413b6f6-1fa4-4365-aa2c-898f8ef0ffff.png)
-
 
 Create repo on github with `Dockerfile` and `index.html` (Application file)
 
