@@ -73,7 +73,7 @@ tar -xzvf apache-maven-3.8.6-bin.tar.gz
 Open jenkins Application (Server 2 _ ip:8080)
 
 Download the the below plugins (Manage Jenkins > Plugin Manager > search the plugins and install it without restart)
-`Deploy to container` 
+
 `Publish over ssh`
 `Maven Integration`
 `Maven Invoker`
@@ -83,7 +83,7 @@ Go to `Manage Jenkins` > `Configure System` > `SSH Server`
 
 Name = docker
 
-Hostname = Docker server "Public IP address" ( Server 1)
+Hostname = Docker server "Private IP address" ( Server 1)
 
 User Name = ramesh    (docker user id and password which created on docker server 1)
 
@@ -91,12 +91,19 @@ Passphrase / Password = "password"
 
 Click on Test connection ( If failed check sshd config OR set visudo with docker user)
 
+![image](https://user-images.githubusercontent.com/111989928/198826055-b57b0bc0-5e21-4ab5-8b3b-6f0039090831.png)
+
+
+
 Go to `Manage Jenkins` > Global tool configuration > set java and maven home directory
 
 java = /usr/lib/jvm/java-11-openjdk-11.0.16.0.8-1.amzn2.0.1.x86_64
 
+![image](https://user-images.githubusercontent.com/111989928/198826027-0413b6f6-1fa4-4365-aa2c-898f8ef0ffff.png)
+
 maven = /opt/maven/apache-maven-3.8.6
 
+![image](https://user-images.githubusercontent.com/111989928/198826010-c9927fd5-8cc8-48c6-91ae-a9838c68b628.png)
 
 
 Now Create Maven Project
