@@ -47,6 +47,7 @@ Change the setting as per below
 
 Edit and Save 
 
+Restart the ssh service
 ```sh
 service sshd restart
 ```
@@ -56,7 +57,7 @@ chown -R ramesh:ramesh /opt/docker
 ```
 
 
-## Install Jenkins + Maven on `Server 2`
+## Install Jenkins on `Server 2`
 ```sh
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
