@@ -1,4 +1,5 @@
-# Project :-  Installing Tomcat Web application on Docker container using Docker + Jenkins
+# Project :-  Installing Tomcat Web application on Docker container
+Tools required : Linux Servers, GitHub, Docker and Jenkins with ssh plugin
 
 Release 2 ec2 servers 
 
@@ -49,6 +50,10 @@ Edit and Save
 ```sh
 service sshd restart
 ```
+Enable folder access to docker user
+```sh
+chown -R ramesh:ramesh /opt/docker
+```
 
 
 ## Install Jenkins + Maven on `Server 2`
@@ -62,21 +67,13 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 yum install git -y
-cd /opt
-mkdir maven
-cd maven
-wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
-chmod 777 apache-maven-3.8.6-bin.tar.gz
-tar -xzvf apache-maven-3.8.6-bin.tar.gz
-
 ```
 Open jenkins Application (Server 2 _ ip:8080)
 
 Download the the below plugins (Manage Jenkins > Plugin Manager > search the plugins and install it without restart)
 
 `Publish over ssh`
-`Maven Integration`
-`Maven Invoker`
+`ssh agaent`
 
 
 Go to `Manage Jenkins` > `Configure System` > `SSH Server` 
@@ -101,25 +98,36 @@ java = /usr/lib/jvm/java-11-openjdk-11.0.16.0.8-1.amzn2.0.1.x86_64
 
 ![image](https://user-images.githubusercontent.com/111989928/198826027-0413b6f6-1fa4-4365-aa2c-898f8ef0ffff.png)
 
-maven = /opt/maven/apache-maven-3.8.6
 
-![image](https://user-images.githubusercontent.com/111989928/198826010-c9927fd5-8cc8-48c6-91ae-a9838c68b628.png)
+Create repo on github with `Dockerfile` and `index.html` (Application file)
+
+![image](https://user-images.githubusercontent.com/111989928/198836945-89d7a4b9-f596-4716-a310-d1c2e44c5008.png)
+
+`Dockerfile` 
+```sh
+# Pull base image 
+From tomcat:9-jre9
+
+# Maintainer 
+MAINTAINER "Ramesh NB" 
+RUN mkdir /usr/local/tomcat/webapps/myapp
+COPY ./index.html /usr/local/tomcat/webapps/myapp
+```
+`index.html` is customized html coding
+![image](https://user-images.githubusercontent.com/111989928/198837047-0dcc18c7-dee9-4b87-a5d2-05d9d9fb011f.png)
 
 
-Now Create Maven Project
 
-![image](https://user-images.githubusercontent.com/111989928/198826106-4dca96e1-0feb-4448-9954-886eb607e682.png)
+Now Create Freestyle Project
 
 
 `Source Code Management`= Git
 
-Repo = https://github.com/Raam043/CICD-GiT-Jenkins-Maven-Docker-Tomcat.git 
+Repo = https://github.com/Raam043/Tomcat_installing-over-ssh.git
 
 Branch = main
 
-![image](https://user-images.githubusercontent.com/111989928/198826157-61ce9e61-4374-4906-95d3-f106121ac152.png)
-
-
+![image](https://user-images.githubusercontent.com/111989928/198836742-b013ad1f-15c8-4d4b-bab4-852ac70ecd76.png)
 
 
 `Build Triggers`= Poll SCM 
@@ -133,12 +141,6 @@ Schedule = * * * * *
 
 Server name = Docker ( Drop down from jenkins setting)
 
-Sourche file = webapp/target/*.war
-
-Remove prefix = webapp/target/
-
-Remote directory = //opt//docker
-
 Exec command = 
 ```sh
 docker stop docker_ramesh
@@ -148,21 +150,16 @@ cd /opt/docker
 docker build -t docker_ramesh
 docker run -d --name docker_ramesh -p 8090:8080 docker_ramesh
 ```
+![image](https://user-images.githubusercontent.com/111989928/198836808-b3a9029a-a938-48ac-b8c9-012f56bbe210.png)
 
-`BUILD` = 
-Root POM = pom.xml
+Save the job and run it
 
-Goals and options = ""
+Results
 
-![image](https://user-images.githubusercontent.com/111989928/198826236-9e7a3697-d3e7-459c-a25c-b68efa106136.png)
-
-
-
+Tomcat is running at `Server_IP:8090`
+![image](https://user-images.githubusercontent.com/111989928/198837101-f67ee652-b94c-4039-a9ca-16cb4a34f4f5.png)
 
 
 
-
-
-
-
-
+Myapp is running at `Server_IP:8090/myapp`
+![image](https://user-images.githubusercontent.com/111989928/198837203-7a3cc60a-8d14-4521-8f48-9c68d56e47fd.png)
