@@ -13,7 +13,7 @@ Deploying application on direct container
 
 # Install Docker
 ```sh
-yum udpate -y
+yum update -y
 yum install docker -y
 systemctl enable docker
 systemctl start docker
