@@ -108,16 +108,25 @@ maven = /opt/maven/apache-maven-3.8.6
 
 Now Create Maven Project
 
+![image](https://user-images.githubusercontent.com/111989928/198826106-4dca96e1-0feb-4448-9954-886eb607e682.png)
+
+
 `Source Code Management`= Git
 
 Repo = https://github.com/Raam043/CICD-GiT-Jenkins-Maven-Docker-Tomcat.git 
 
 Branch = main
 
+![image](https://user-images.githubusercontent.com/111989928/198826157-61ce9e61-4374-4906-95d3-f106121ac152.png)
+
+
+
 
 `Build Triggers`= Poll SCM 
 
 Schedule = * * * * *
+
+![image](https://user-images.githubusercontent.com/111989928/198826209-1dd3f38c-02ae-4e68-954f-0ee271e7c026.png)
 
 
 `Pre Steps`= Send files or execute commands over SSH
@@ -145,6 +154,7 @@ Root POM = pom.xml
 
 Goals and options = ""
 
+![image](https://user-images.githubusercontent.com/111989928/198826236-9e7a3697-d3e7-459c-a25c-b68efa106136.png)
 
 
 
