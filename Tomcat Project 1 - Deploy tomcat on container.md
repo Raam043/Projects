@@ -1,4 +1,4 @@
-# Project :-  Installing Tomcat Web application on Docker container
+# Project :-  Installing Tomcat Web application on Docker container using ```diff + SSH```
 Tools required : Linux Servers, GitHub, Docker and Jenkins with ssh plugin
 
 Release 2 ec2 servers 
