@@ -129,12 +129,14 @@ Branch = main
 
 Schedule = * * * * *
 
-![image](https://user-images.githubusercontent.com/111989928/198826209-1dd3f38c-02ae-4e68-954f-0ee271e7c026.png)
+
 
 
 `Pre Steps`= Send files or execute commands over SSH
 
 Server name = Docker ( Drop down from jenkins setting)
+
+![image](https://user-images.githubusercontent.com/111989928/198826209-1dd3f38c-02ae-4e68-954f-0ee271e7c026.png)
 
 Exec command = 
 ```sh
@@ -163,7 +165,6 @@ Myapp is running at `Server_IP:8090/myapp`
 ![image](https://user-images.githubusercontent.com/111989928/198837203-7a3cc60a-8d14-4521-8f48-9c68d56e47fd.png)
 
 
-![Project Map](https://user-images.githubusercontent.com/111989928/198877338-f5f5203f-3a59-4b86-968e-b72e2b37de49.png)
 
 
 
