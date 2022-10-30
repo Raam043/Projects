@@ -163,10 +163,7 @@ Myapp is running at `Server_IP:8090/myapp`
 ![image](https://user-images.githubusercontent.com/111989928/198837203-7a3cc60a-8d14-4521-8f48-9c68d56e47fd.png)
 
 
-
-
-My Image
-![image](https://user-images.githubusercontent.com/111989928/198877301-480aefd4-991c-4ddf-a180-046f1e049bb6.png)
+![Project Map](https://user-images.githubusercontent.com/111989928/198877338-f5f5203f-3a59-4b86-968e-b72e2b37de49.png)
 
 
 
