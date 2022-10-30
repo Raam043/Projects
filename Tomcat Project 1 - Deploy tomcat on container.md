@@ -138,12 +138,15 @@ Server name = Docker ( Drop down from jenkins setting)
 
 Exec command = 
 ```sh
-docker stop docker_ramesh
-docker rm -f docker_ramesh
-docker image rm -f docker_ramesh
-cd /opt/docker
-docker build -t docker_ramesh
+rm -rf Tomcat_installing-over-ssh
+git clone https://github.com/Raam043/Tomcat_installing-over-ssh.git
+cd Tomcat_installing-over-ssh
+docker stop docker_ramesh;
+docker rm -f docker_ramesh;
+docker image rm -f docker_ramesh;
+docker build -t docker_ramesh .
 docker run -d --name docker_ramesh -p 8090:8080 docker_ramesh
+
 ```
 ![image](https://user-images.githubusercontent.com/111989928/198836808-b3a9029a-a938-48ac-b8c9-012f56bbe210.png)
 
