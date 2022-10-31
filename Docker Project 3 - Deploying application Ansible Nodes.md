@@ -135,6 +135,7 @@ Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variab
 ![image](https://user-images.githubusercontent.com/111989928/199030547-20e46ed9-edf7-4823-9942-e41c9c23f3e3.png)
 
 Select Secret text
+
 ![image](https://user-images.githubusercontent.com/111989928/199030755-0a0b420c-e319-432b-96d7-15f24a256478.png)
 
 Add DockerHub Password on "Secret field"
@@ -143,7 +144,45 @@ Add DockerHub Password on "Secret field"
 ![image](https://user-images.githubusercontent.com/111989928/199031232-7cdf1ee9-9e38-4cfc-b8ff-38bc55dc2329.png)
 Remove "// some block" and Paste srcipt on pipeline script
 
-`First Run Script`
+
+`First Run Pipeline Script`
+
+```sh
+pipeline {
+    agent any
+
+    stages {
+        stage('Git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/Jenkins-project-test.git'
+            }
+        }
+        stage('Docker image Build') {
+            steps {
+                sh 'docker build -t myapp .'
+            }
+        }
+        stage('Docker Conatiner run') {
+            steps {
+                sh 'docker run -d --name myapp -p 80:80 myapp'
+                sh 'docker tag myapp raam043/myapp:latest'
+            }
+        }
+        stage('Image push to DockerHub & Deploying on Ansible nodes') {
+            steps {
+                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
+                    sh 'docker login -u raam043 -p ${DP}'
+                    sh 'docker push raam043/myapp:latest'
+                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
+            }
+        }
+        }
+    }
+}
+```
+
+
+
 
 
 
@@ -151,28 +190,50 @@ Remove "// some block" and Paste srcipt on pipeline script
 
 Please refer the below script 
 
+```sh
+pipeline {
+    agent any
 
-
-
-
-Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "DP" > add Credentials = using jenkins Credentials 
-select `Secrete text` add Password on text field save and generate script
-
-ouput
-withCredentials([string(credentialsId: 'Docker-pp', variable: 'Docker-pp')]) {
-    // some block
+    stages {
+        stage('Git checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/Jenkins-project-test.git'
+            }
+        }
+        stage('Docker image Build') {
+            steps {
+                sh 'docker stop myapp'
+                sh 'docker rm -f myapp'
+                sh 'docker image rm -f myapp'
+                sh 'docker build -t myapp .'
+            }
+        }
+        stage('Docker Conatiner run') {
+            steps {
+                sh 'docker run -d --name myapp -p 80:80 myapp'
+                sh 'docker tag myapp raam043/myapp:latest'
+            }
+        }
+        stage('Image push to DockerHub & Deploying on Ansible nodes') {
+            steps {
+                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
+                    sh 'docker login -u raam043 -p ${DP}'
+                    sh 'docker push raam043/myapp:latest'
+                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
+            }
+        }
+        }
+    }
 }
 
-remove "some block line item and paste on pipeline script
+```
+
+
 
 Save and run the job.
-
-
-
-
-
-
-
- 
  
  Project success Enjoy 👍😊
+ 
+ 
+ ![image](https://user-images.githubusercontent.com/111989928/199034755-97620921-834e-4e0e-873c-f5e1c6a553e8.png)
+
