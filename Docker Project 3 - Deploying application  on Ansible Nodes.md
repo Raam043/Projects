@@ -180,6 +180,7 @@ pipeline {
         }
         stage('Docker image Build') {
             steps {
+                sh 'docker image rm -f myapp'
                 sh 'docker build -t myapp .'
             }
         }
@@ -189,14 +190,18 @@ pipeline {
                 sh 'docker tag myapp raam043/myapp:latest'
             }
         }
-        stage('Image push to DockerHub & Deploying on Ansible nodes') {
+        stage('Image pushing to DockerHub') {
             steps {
                 withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
                     sh 'docker login -u raam043 -p ${DP}'
                     sh 'docker push raam043/myapp:latest'
-                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
             }
         }
+        }
+         stage('Deploying application on Ansible Nodes') {
+            steps {
+                ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
+            }
         }
     }
 }
@@ -235,14 +240,18 @@ pipeline {
                 sh 'docker tag myapp raam043/myapp:latest'
             }
         }
-        stage('Image push to DockerHub & Deploying on Ansible nodes') {
+        stage('Image pushing to DockerHub') {
             steps {
                 withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
                     sh 'docker login -u raam043 -p ${DP}'
                     sh 'docker push raam043/myapp:latest'
-                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
             }
         }
+        }
+         stage('Deploying application on Ansible Nodes') {
+            steps {
+                ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
+            }
         }
     }
 }
