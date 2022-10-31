@@ -1,4 +1,4 @@
-## Project :- CICD for Running customized image containers on Ansible nodes
+## Project :- CICD for Containerized Applications on Ansible Nodes
 
 
 # Project Map
