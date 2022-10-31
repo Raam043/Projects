@@ -161,6 +161,10 @@ Use Password as "Key pair of AWS" Open with notepad you can able see the passwor
 
 ![image](https://user-images.githubusercontent.com/111989928/199037692-de45c2ff-0e15-40d2-a3b4-e191fa36e56b.png)
 
+In the end please check ssh key check and generate the script
+![image](https://user-images.githubusercontent.com/111989928/199038253-1fc18712-b4dc-4e03-8932-bd06bc661103.png)
+
+
 `First Run Pipeline Script`
 
 ```sh
