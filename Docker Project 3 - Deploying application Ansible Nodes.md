@@ -256,10 +256,10 @@ Save and run the job.
  Project success Enjoy 👍😊
  
  `Output`
- ![image](https://user-images.githubusercontent.com/111989928/199034755-97620921-834e-4e0e-873c-f5e1c6a553e8.png)
+ 
+ ![image](https://user-images.githubusercontent.com/111989928/199040601-9e7aaea4-5a7d-4af7-a992-26e407afb54c.png)
+
 
 `Jenkins Pipeline View`
+
 ![image](https://user-images.githubusercontent.com/111989928/199040378-7e827f55-a8fd-45c9-acff-e745945885d3.png)
-
-
-
