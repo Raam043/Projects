@@ -22,6 +22,13 @@ systemctl start docker
 yum install pip -y
 pip install docker-py
 ```
+run te commands only for jenkins to grant docke raccess for ec2-user
+```sh
+sudo chmod 666 /var/run/docker.sock
+usermod -aG docker ec2-user
+chown -R ec2-user:ec2-user /root/
+chown -R ec2-user:ec2-user /opt/
+```
 Generate key for connecting all nodes along with docker
 ```sh
 cd
