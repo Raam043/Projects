@@ -146,6 +146,21 @@ Add DockerHub Password on "Secret field"
 Remove "// some block" and Paste srcipt on pipeline script
 
 
+Add Ansible SSH key with playbook script
+
+![image](https://user-images.githubusercontent.com/111989928/199037968-185a9220-305f-4d17-9f8e-487e3adcaba1.png)
+
+
+
+![image](https://user-images.githubusercontent.com/111989928/199037309-f225cf92-53d2-494f-bac9-328d3f125a58.png)
+
+![image](https://user-images.githubusercontent.com/111989928/199037518-54c42a97-1cbb-4d91-be40-675f525c65a5.png)
+
+
+Use Password as "Key pair of AWS" Open with notepad you can able see the password
+
+![image](https://user-images.githubusercontent.com/111989928/199037692-de45c2ff-0e15-40d2-a3b4-e191fa36e56b.png)
+
 `First Run Pipeline Script`
 
 ```sh
