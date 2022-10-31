@@ -31,6 +31,8 @@ Generate key for connecting all nodes along with docker
 ```sh
 cd
 ssh-keygen
+```
+```sh
 cat /root/.ssh/id_rsa.pub>>/root/.ssh/authorized_keys
 chmod 755 /root/.ssh/authorized_keys
 cat /root/.ssh/id_rsa.pub>>/home/ec2-user/.ssh/authorized_keys
