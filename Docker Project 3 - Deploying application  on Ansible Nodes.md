@@ -1,7 +1,7 @@
-## Project :- CICD for Containerized Applications on Ansible Nodes
+# Project :- CICD for Containerized Applications on Ansible Nodes
 
 
-# Project Map
+## Project Map
 ![Project Map](https://user-images.githubusercontent.com/111989928/198696150-0ec910dc-096f-402e-8917-2c719133825e.png)
 
 
@@ -14,7 +14,7 @@ Requirements:
 
 `STEP - 1`
 
-# Install Docker
+## Install Docker
 ```sh
 yum update -y
 yum install docker -y
@@ -38,14 +38,14 @@ ssh localhost
 
 `STEP - 2`
 
-Now create the AMI ( image for coping the nodes)
+## Now create the AMI ( image for coping the nodes)
 With AMI create 2 + more nodes
 ![image](https://user-images.githubusercontent.com/111989928/199017364-7fe7bd3d-f624-4a1f-b754-d01c52a9e797.png)
 
 
 `STEP - 3`
 
-# Install Jenkins
+## Install Jenkins
 ```sh
 wget -O /etc/yum.repos.d/jenkins.repo \
     https://pkg.jenkins.io/redhat-stable/jenkins.repo
@@ -57,12 +57,12 @@ systemctl enable jenkins
 systemctl start jenkins
 ```
 
-# Install Ansible 
+## Install Ansible 
 ```sh
 amazon-linux-extras install ansible2 -y
 ```
 
-# Install Git
+## Install Git
 ```sh
 yum install git -y
 ```
