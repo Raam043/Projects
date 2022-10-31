@@ -65,22 +65,21 @@ yum install git -y
 `STEP - 4`
 Create Git Repo with `Dockerfile`, `Nodes.inv`, `httpd_container.yml` & your own`index.html`
 
-`Dockerfile`
+**[Dockerfile](https://github.com/Raam043/Jenkins-project-test/blob/main/Dockerfile)**
 ```sh
 FROM httpd
 COPY index.html /usr/local/apache2/htdocs
 EXPOSE 80
 ```
 
-`nodes.inv`
+**[nodes.inv](https://github.com/Raam043/CICD_Project-Deploy_Webapp_to_docker_containers_using_Ansible-LINUX/blob/2360cc582c9fe661424b4dde6e6ffb77d44c3547/nodes.inv)** Copy all nodes private ip address and paste on below nodes.inv file along with "ansible_user=ec2-user"
 ```sh
 [rnb]
 172.31.35.232 ansible_user=ec2-user
 172.31.39.215 ansible_user=ec2-user
 ```
-Copy all nodes private ip and paste on **[nodes.inv](https://github.com/Raam043/CICD_Project-Deploy_Webapp_to_docker_containers_using_Ansible-LINUX/blob/2360cc582c9fe661424b4dde6e6ffb77d44c3547/nodes.inv)**
 
-`httpd_container.yml`
+**[Container.yml](https://github.com/Raam043/Jenkins-project-test/blob/main/httpd_container.yml)** Ansible playbook file for deploy application on all nodes
 ```sh
 ---
 - hosts: rnb
