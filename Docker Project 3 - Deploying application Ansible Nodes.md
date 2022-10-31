@@ -27,6 +27,18 @@ chown -R ec2-user:ec2-user /root/
 chown -R ec2-user:ec2-user /opt/
 
 ```
+Generate key for connecting all nodes along with docker
+```sh
+cd
+ssh-keygen
+cat /root/.ssh/id_rsa.pub>>/root/.ssh/authorized_keys
+chmod 755 /root/.ssh/authorized_keys
+cat /root/.ssh/id_rsa.pub>>/home/ec2-user/.ssh/authorized_keys
+chmod 755 /home/ec2-user/.ssh/authorized_keys
+ssh localhost
+```
+Now create the AMI ( image for coping the nodes)
+AMI
 
 # Install Jenkins
 ```sh
