@@ -209,7 +209,7 @@ pipeline {
 
 `Second Run & Continuous Run`
 
-Please refer the below script 
+It will delete running container and old images and build new images with new container
 
 ```sh
 pipeline {
