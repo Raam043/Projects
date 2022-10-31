@@ -142,6 +142,7 @@ Add DockerHub Password on "Secret field"
 ![image](https://user-images.githubusercontent.com/111989928/199030896-810003ba-e272-47ac-8fa9-c9321cab8037.png)
 
 ![image](https://user-images.githubusercontent.com/111989928/199031232-7cdf1ee9-9e38-4cfc-b8ff-38bc55dc2329.png)
+
 Remove "// some block" and Paste srcipt on pipeline script
 
 
