@@ -13,6 +13,7 @@ Requirements:
 3. Git Repo with Dockerfile, Application file, Anisble yaml amd nodes inverntory files
 
 `STEP - 1`
+
 # Install Docker
 ```sh
 yum update -y
@@ -34,12 +35,16 @@ cat /root/.ssh/id_rsa.pub>>/home/ec2-user/.ssh/authorized_keys
 chmod 755 /home/ec2-user/.ssh/authorized_keys
 ssh localhost
 ```
+
 `STEP - 2`
+
 Now create the AMI ( image for coping the nodes)
 With AMI create 2 + more nodes
 ![image](https://user-images.githubusercontent.com/111989928/199017364-7fe7bd3d-f624-4a1f-b754-d01c52a9e797.png)
 
+
 `STEP - 3`
+
 # Install Jenkins
 ```sh
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -62,7 +67,16 @@ amazon-linux-extras install ansible2 -y
 yum install git -y
 ```
 
+Only for jenkins server to grant docker access for ec2-user
+```sh
+sudo chmod 666 /var/run/docker.sock
+usermod -aG docker ec2-user
+chown -R ec2-user:ec2-user /root/
+chown -R ec2-user:ec2-user /opt/
+```
+
 `STEP - 4`
+
 Create Git Repo with `Dockerfile`, `Nodes.inv`, `httpd_container.yml` & your own`index.html`
 
 **[Dockerfile](https://github.com/Raam043/Jenkins-project-test/blob/main/Dockerfile)**
@@ -102,64 +116,46 @@ EXPOSE 80
         - "80:80"
  ```
  
+`STEP - 5`
 
-Now open jenkins add plugins `Ansible` set the path as "/usr/bin" at Global tools configuration setting
+Now Setup the Jenkins profile and add plugins `Ansible` set the path as "/usr/bin" at Global tools configuration setting
+
+![image](https://user-images.githubusercontent.com/111989928/199026626-71ed12ff-3eda-4919-b1e7-e61241ff391e.png)
+
+![image](https://user-images.githubusercontent.com/111989928/199027450-eee436ab-c328-4eaa-a4a7-60b12a258d6f.png)
 
 
-Create pipeline project with Build Triggers as Poll SCM "* * * * *"
+`STEP - 6`
+
+Create `Pipeline project` with Build Triggers as Poll SCM "* * * * *
+
+For Docker password use Secret text 
+Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "DP" > add Credentials = using jenkins Credentials
+
+![image](https://user-images.githubusercontent.com/111989928/199030547-20e46ed9-edf7-4823-9942-e41c9c23f3e3.png)
+
+Select Secret text
+![image](https://user-images.githubusercontent.com/111989928/199030755-0a0b420c-e319-432b-96d7-15f24a256478.png)
+
+Add DockerHub Password on "Secret field"
+![image](https://user-images.githubusercontent.com/111989928/199030896-810003ba-e272-47ac-8fa9-c9321cab8037.png)
+
+![image](https://user-images.githubusercontent.com/111989928/199031232-7cdf1ee9-9e38-4cfc-b8ff-38bc55dc2329.png)
+Remove "// some block" and Paste srcipt on pipeline script
+
+`First Run Script`
+
+
+
+`Second Run & Continuous Run`
 
 Please refer the below script 
-```sh
-
-pipeline {
-    agent any
-
-    stages {
-        stage('Git checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Raam043/Jenkins-project-test.git'
-            }
-        }
-        stage('Docker image Build') {
-            steps {
-                sh 'docker stop docker_ramesh'
-                sh 'docker rm -f docker_ramesh'
-                sh 'docker image rm -f docker_ramesh'
-                sh 'docker build -t docker_ramesh .'
-            }
-        }
-        stage('Docker Conatiner run') {
-            steps {
-                sh 'docker run -d --name docker_ramesh -p 80:80 docker_ramesh'
-                sh 'docker tag docker_ramesh raam043/test_project:latest'
-            }
-        }
-        stage('Image push to DockerHub & Deploying on Ansible nodes') {
-            steps {
-                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
-                    sh 'docker login -u raam043 -p ${DP}'
-                    sh 'docker push raam043/test_project:latest'
-                    ansiblePlaybook credentialsId: 'Ansible-private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'nodes.inv', playbook: 'httpd_container.yml'
-            }
-        }
-        }
-    }
-}
 
 
-```
 
-`If Pipeline failed`
-run te commands only for jenkins to grant docker access for ec2-user
-```sh
-sudo chmod 666 /var/run/docker.sock
-usermod -aG docker ec2-user
-chown -R ec2-user:ec2-user /root/
-chown -R ec2-user:ec2-user /opt/
-```
 
-For adding DockerHub credentials please follow below steps
-Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "Docker-pp" > add Credentials = using jenkins Credentials 
+
+Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "DP" > add Credentials = using jenkins Credentials 
 select `Secrete text` add Password on text field save and generate script
 
 ouput
