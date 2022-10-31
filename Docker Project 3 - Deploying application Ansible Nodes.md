@@ -7,12 +7,12 @@
 
 
 
-Prerequisites:
+Requirements:
 1. Master EC2 instance with Docker,Jenkins and Ansible installed (SSH key configuration)
 2. Nodes with docker+pip installed (copy of master ssh id.rsa.pub on all nodes)
 3. Git Repo with Dockerfile, Application file, Anisble yaml amd nodes inverntory files
 
-
+`STEP - 1`
 # Install Docker
 ```sh
 yum update -y
@@ -21,13 +21,6 @@ systemctl enable docker
 systemctl start docker
 yum install pip -y
 pip install docker-py
-```
-run te commands only for jenkins to grant docke raccess for ec2-user
-```sh
-sudo chmod 666 /var/run/docker.sock
-usermod -aG docker ec2-user
-chown -R ec2-user:ec2-user /root/
-chown -R ec2-user:ec2-user /opt/
 ```
 Generate key for connecting all nodes along with docker
 ```sh
@@ -41,9 +34,12 @@ cat /root/.ssh/id_rsa.pub>>/home/ec2-user/.ssh/authorized_keys
 chmod 755 /home/ec2-user/.ssh/authorized_keys
 ssh localhost
 ```
+`STEP - 2`
 Now create the AMI ( image for coping the nodes)
-AMI
+With AMI create 2 + more nodes
+![image](https://user-images.githubusercontent.com/111989928/199017364-7fe7bd3d-f624-4a1f-b754-d01c52a9e797.png)
 
+`STEP - 3`
 # Install Jenkins
 ```sh
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -66,15 +62,50 @@ amazon-linux-extras install ansible2 -y
 yum install git -y
 ```
 
-SSH key generation on master and copy to all nodes
+`STEP - 4`
+Create Git Repo with `Dockerfile`, `Nodes.inv`, `httpd_container.yml` & your own`index.html`
 
+`Dockerfile`
 ```sh
-ssh-keygen
+FROM httpd
+COPY index.html /usr/local/apache2/htdocs
+EXPOSE 80
 ```
-Copy the id.rsa.pub to node and make AMI to release more servers
 
+`nodes.inv`
+```sh
+[rnb]
+172.31.35.232 ansible_user=ec2-user
+172.31.39.215 ansible_user=ec2-user
+```
 Copy all nodes private ip and paste on **[nodes.inv](https://github.com/Raam043/CICD_Project-Deploy_Webapp_to_docker_containers_using_Ansible-LINUX/blob/2360cc582c9fe661424b4dde6e6ffb77d44c3547/nodes.inv)**
+
+`httpd_container.yml`
+```sh
+---
+- hosts: rnb
+  become: True
+  tasks:
+        
+    - name: Run docker container
+      command: "docker stop raam043/test_project:latest"
+      command: "docker rm -f raam043/test_project:latest"
+      command: "docker image rm -f raam043/test_project:latest"
+      
+    - name: Run docker container
+      docker_container:
+        name: WebServer
+        image: raam043/test_project:latest
+        state: started
+        exposed_ports:
+        - "80"
+        ports:
+        - "80:80"
+ ```
+ 
+
 Now open jenkins add plugins `Ansible` set the path as "/usr/bin" at Global tools configuration setting
+
 
 Create pipeline project with Build Triggers as Poll SCM "* * * * *"
 
@@ -119,6 +150,15 @@ pipeline {
 
 ```
 
+`If Pipeline failed`
+run te commands only for jenkins to grant docker access for ec2-user
+```sh
+sudo chmod 666 /var/run/docker.sock
+usermod -aG docker ec2-user
+chown -R ec2-user:ec2-user /root/
+chown -R ec2-user:ec2-user /opt/
+```
+
 For adding DockerHub credentials please follow below steps
 Click on `Pipeline Syntax` > select `withCredentials: Bind credentials to variables` > Variable = "Docker-pp" > add Credentials = using jenkins Credentials 
 select `Secrete text` add Password on text field save and generate script
@@ -134,43 +174,10 @@ Save and run the job.
 
 
 
-`Dockerfile`
-```sh
-FROM httpd
-COPY index.html /usr/local/apache2/htdocs
-EXPOSE 80
-```
 
 
-`nodes.inv`
-```sh
-[rnb]
-172.31.35.232 ansible_user=ec2-user
-172.31.39.215 ansible_user=ec2-user
-```
 
-`httpd_container.yml`
-```sh
----
-- hosts: rnb
-  become: True
-  tasks:
-        
-    - name: Run docker container
-      command: "docker stop raam043/test_project:latest"
-      command: "docker rm -f raam043/test_project:latest"
-      command: "docker image rm -f raam043/test_project:latest"
-      
-    - name: Run docker container
-      docker_container:
-        name: WebServer
-        image: raam043/test_project:latest
-        state: started
-        exposed_ports:
-        - "80"
-        ports:
-        - "80:80"
- ```
+
  
  
  Project success Enjoy 👍😊
