@@ -67,3 +67,15 @@ For `Maven`
 ![image](https://user-images.githubusercontent.com/111989928/199538740-89981c5f-c5f4-42d0-a0d5-66bfa2e685e3.png)
 
 
+
+## 3. `On Server 2 - Tomcat` Install Tomcat + create work directory on tomcat/webapps
+```sh
+yum update -y
+cd /opt
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+tar -xzvf apache-tomcat-9.0.68.tar.gz
+mkdir /opt/apache-tomcat-9.0.68/webapps/RRR
+```
+
+
+
