@@ -111,7 +111,7 @@ Add ` <!-- ` before "<Valve ClassNam and
 Restart tomcat
 ```sh
 cd /opt/apache-tomcat-9.0.68/bin
-shutdown.sh
+./shutdown.sh
 ./startup.sh
 ```
 After editing both context.xml files now open the manager app it will open
