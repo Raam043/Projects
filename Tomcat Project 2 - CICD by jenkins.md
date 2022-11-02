@@ -4,7 +4,7 @@ Release 2 server
 1 for Jenkins + Maven
 1 for Tomcat
 
-`On Server 1` Install jenkins + Maven and setup the application
+1. `On Server 1` Install jenkins + Maven
 ```sh
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -19,3 +19,5 @@ cd /opt
 wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
 tar -xzvf apache-maven-3.8.6-bin.tar.gz
 ```
+
+Setup the environment setting for Java and Maven
