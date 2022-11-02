@@ -16,6 +16,7 @@ amazon-linux-extras install java-openjdk11 -y
 yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
+yum install git -y
 cd /opt
 wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
 tar -xzvf apache-maven-3.8.6-bin.tar.gz
@@ -56,3 +57,13 @@ Once opened the jenkins download the plugins for maven project @ Manage jenkins 
 * Maven Invoker
 
 Setup the tools @ manage jenkins > Global tool configuration
+
+For `Java`
+
+![image](https://user-images.githubusercontent.com/111989928/199538575-3656cd22-a254-477b-b49f-8beec3870d8b.png)
+
+For `Maven`
+
+![image](https://user-images.githubusercontent.com/111989928/199538740-89981c5f-c5f4-42d0-a0d5-66bfa2e685e3.png)
+
+
