@@ -119,7 +119,22 @@ After editing both context.xml files now open the manager app it will open
 ![image](https://user-images.githubusercontent.com/111989928/199548711-21756b74-44d2-4873-afe0-0b1b6ab5ca82.png)
 
  Now create Users with Roles
- 
+ ```sh
+vi /opt/apache-tomcat-9.0.68/conf/tomcat-users.xml
+```
+Add Below roles 
+```sh
+<role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>
+<user username="ramesh" password="ramesh123" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+```
+```diff
+- Before
+```
+![image](https://user-images.githubusercontent.com/111989928/199549788-13e33905-5e20-40ef-af59-5bed6e54ca50.png)
 
-
-
+```diff
++ After
+```
