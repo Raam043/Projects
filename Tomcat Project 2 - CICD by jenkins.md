@@ -1,6 +1,6 @@
 # Application deploying on Tomcat using Tomcat manager role and user by Jenkins & Maven
 
-## 1. Release 2 server
+## 1. Release 2 Linux servers
 1 for Jenkins + Maven
 
 1 for Tomcat
@@ -22,3 +22,15 @@ tar -xzvf apache-maven-3.8.6-bin.tar.gz
 ```
 
 Setup the environment setting for Java and Maven
+```sh
+cd
+vi .bash_profile
+```
+
+Add the path as shown below based on version of Java + Maven
+```diff
+- Before
+```
+
+![image](https://user-images.githubusercontent.com/111989928/199534365-046e6aa0-b0b7-419b-993b-aa106527ef3b.png)
+
