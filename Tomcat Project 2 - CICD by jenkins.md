@@ -108,6 +108,8 @@ Add `<!--` before "<Valve ClassNam and
 ![image](https://user-images.githubusercontent.com/111989928/199544536-01499aef-84c4-496c-9949-525466342aef.png)
     
 
+After editing both context.xml files now open the manager app it will open
+ 
 
 
 
