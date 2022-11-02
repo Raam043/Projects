@@ -4,7 +4,7 @@ Release 2 server
 1 for Jenkins + Maven
 1 for Tomcat
 
-1. `On Server 1` Install jenkins + Maven
+## 1. `On Server 1` Install jenkins + Maven
 ```sh
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo \
