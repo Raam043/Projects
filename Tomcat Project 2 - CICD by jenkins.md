@@ -39,4 +39,11 @@ Add the path as shown below based on version of Java + Maven
 ```
 
 ![image](https://user-images.githubusercontent.com/111989928/199535469-b1bf3a7c-3cb4-47b4-97a4-9c7b40c5a4fb.png)
+```sh
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.16.0.8-1.amzn2.0.1.x86_64
+M2_HOME=/opt/maven/apache-maven-3.8.6
+M2=$M2_HOME/bin
+
+PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
+```
 
