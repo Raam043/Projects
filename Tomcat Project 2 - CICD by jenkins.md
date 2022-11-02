@@ -204,3 +204,12 @@ Output
 
 Above all Installation will be remain same and additionally installing Docker on `Server 1 - Jenkins`
 ```sh
+yum update -y
+yum install docker -y
+systemctl enable docker
+systemctl start docker
+yum install pip -y
+pip install docker-py
+sudo chmod 666 /var/run/docker.sock
+```
+    
