@@ -71,8 +71,6 @@ Only for jenkins server to grant docker access for ec2-user
 ```sh
 sudo chmod 666 /var/run/docker.sock
 usermod -aG docker ec2-user
-chown -R ec2-user:ec2-user /root/
-chown -R ec2-user:ec2-user /opt/
 ```
 
 `STEP - 4`
