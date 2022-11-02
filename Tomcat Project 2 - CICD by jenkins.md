@@ -80,15 +80,22 @@ cd /opt/apache-tomcat-9.0.68/bin
 ./startup.sh
 ```
 Open Server IP : 8080 on new tab
+![image](https://user-images.githubusercontent.com/111989928/199546600-db8acd8b-c491-4063-8ecf-6f47cca27180.png)
 
-Edit the `Context.xml` file to enable public login for Host manager (Edit the both files same as shown below)
+Tomcat application is runng and open "Manager App" it will denied to open 
+
+![image](https://user-images.githubusercontent.com/111989928/199546993-96aa595b-12a5-4810-b928-9a2952b0129d.png)
+
+
+Lets enable the Manager login with editing the `Context.xml` file to enable public login for Host manager (Edit the both files same as shown below)
 
 ```sh
 vi /opt/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
 ```
 ```sh
-vi 
+vi /opt/apache-tomcat-9.0.68/webapps/manager/META-INF/context.xml
 ```
+OR you can serach mannualy run command "find / -name context.xml"
 ```diff
 - Before
 ```
@@ -99,6 +106,8 @@ vi
 Add `<!--` before "<Valve ClassNam and 
                           0:0:1" (2nd line end) `-->`
 ![image](https://user-images.githubusercontent.com/111989928/199544536-01499aef-84c4-496c-9949-525466342aef.png)
+    
+
 
 
 
