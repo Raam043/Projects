@@ -72,12 +72,16 @@ For `Maven`
 ```sh
 yum update -y
 cd /opt
+yum install java -y
 wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
 tar -xzvf apache-tomcat-9.0.68.tar.gz
 mkdir /opt/apache-tomcat-9.0.68/webapps/RRR
+cd /opt/apache-tomcat-9.0.68/bin
+./startup.sh
 ```
+Open Server IP : 8080 on new tab
 
-Edit the `Context.xml` file to enable public login for Host manager
+Edit the `Context.xml` file to enable public login for Host manager (Edit the both files same as shown below)
 
 ```sh
 vi /opt/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
