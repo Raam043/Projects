@@ -192,5 +192,10 @@ Add URL of Tomcat Server with Port
 
 ![image](https://user-images.githubusercontent.com/111989928/199554059-4b5fd610-71f6-4b3d-a7d9-b1073d7bf6ef.png)
     
+ Save and Run the job
  
+Output
+    
+![image](https://user-images.githubusercontent.com/111989928/199560877-a4e5d17e-516b-476e-974a-5d3637e8fad5.png)
+
     
