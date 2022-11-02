@@ -47,3 +47,12 @@ M2=$M2_HOME/bin
 PATH=$PATH:$JAVA_HOME:$M2_HOME:$M2:$HOME/bin
 ```
 
+Now Setup the jenkins app
+![image](https://user-images.githubusercontent.com/111989928/199536974-545a8c9a-e286-4591-afd4-391b9afbcb66.png)
+
+Once opened the jenkins download the plugins for maven project @ Manage jenkins > Manage plugins
+
+* Maven Integration
+* Maven Invoker
+
+Setup the tools @ manage jenkins > Global tool configuration
