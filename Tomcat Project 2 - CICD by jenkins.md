@@ -17,7 +17,8 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 yum install git -y
-cd /opt
+mkdir /opt/maven
+cd /opt/maven
 wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
 tar -xzvf apache-maven-3.8.6-bin.tar.gz
 ```
@@ -173,6 +174,7 @@ Create "Maven Project"  on jenkins
 
  
 `Post-build actions` = Deploy war/ear to a container
+    
 ![image](https://user-images.githubusercontent.com/111989928/199553064-192267cd-3454-4b52-b896-fe5e7d7a5b7f.png)
 
     
