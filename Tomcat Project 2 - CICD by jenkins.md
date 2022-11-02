@@ -139,3 +139,20 @@ Add Below roles
 + After
 ```
 ![image](https://user-images.githubusercontent.com/111989928/199550166-9e6822b6-71e8-4eb6-99fd-aac7ca39e47c.png)
+
+    
+Restart tomcat
+```sh
+cd /opt/apache-tomcat-9.0.68/bin
+./shutdown.sh
+./startup.sh
+```
+Now you can login into Manager App with Credentials ( please remember credentials - same can be used on jenkins pipeline)
+
+![image](https://user-images.githubusercontent.com/111989928/199550677-aa028f58-9827-40e2-a9bc-4e6da8310507.png)
+
+ ![image](https://user-images.githubusercontent.com/111989928/199550879-428a3c33-5d1f-42ef-9af5-ded547fae0a0.png)
+    
+## 4. Go to `Jenkins App` to create pipeline
+    
+ 
