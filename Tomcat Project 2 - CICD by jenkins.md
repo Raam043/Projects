@@ -89,8 +89,6 @@ vi
 - Before
 ```
 ![image](https://user-images.githubusercontent.com/111989928/199543146-bd741583-aa7d-46c3-82b6-ce81f3eac789.png)
-
-
 ```diff
 + After
 ```
