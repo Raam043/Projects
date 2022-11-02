@@ -55,6 +55,7 @@ Once opened the jenkins download the plugins for maven project @ Manage jenkins 
 
 * Maven Integration
 * Maven Invoker
+* Deploy to container
 
 Setup the tools @ manage jenkins > Global tool configuration
 
@@ -153,6 +154,36 @@ Now you can login into Manager App with Credentials ( please remember credential
 
  ![image](https://user-images.githubusercontent.com/111989928/199550879-428a3c33-5d1f-42ef-9af5-ded547fae0a0.png)
     
-## 4. Go to `Jenkins App` to create pipeline
+## 4. Now lets build Job with creating Git Repo + Jenkins Project Pipeline
+
+Inn my case i have created repo with Maven `pom.xml` with dependency 
+    
+![image](https://user-images.githubusercontent.com/111989928/199551830-ca01ecb5-e7ea-402e-b045-f78841b0c266.png)
+
+
+Create "Maven Project"  on jenkins
+![image](https://user-images.githubusercontent.com/111989928/199551241-682cd195-09a9-4727-b573-129a37f21c29.png)
+
+`Source Code Management` = Git with main Branch
+![image](https://user-images.githubusercontent.com/111989928/199552014-0318097f-842b-43f8-8f98-0f0de28de376.png)
+
+    
+`BUILD` =  pom.xml and goal will be blank
+![image](https://user-images.githubusercontent.com/111989928/199552287-ec66d95b-efab-45b1-95c4-413cb2db36ed.png)
+
+ 
+`Post-build actions` = Deploy war/ear to a container
+![image](https://user-images.githubusercontent.com/111989928/199553064-192267cd-3454-4b52-b896-fe5e7d7a5b7f.png)
+
+    
+WAR/EAR files = **/*.war
+Context path = ""
+Containers = Browse - Tomcat 9.x Remote
+![image](https://user-images.githubusercontent.com/111989928/199553431-2b3d3254-dc69-400d-9939-27eb1f694398.png)
+
+Add Credentials using jenkins symbol
+![image](https://user-images.githubusercontent.com/111989928/199553822-e454b65a-c064-4207-a874-47aeb03a5447.png)
+
     
  
+    
