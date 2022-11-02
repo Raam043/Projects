@@ -103,8 +103,8 @@ OR you can serach mannualy run command "find / -name context.xml"
 ```diff
 + After
 ```
-Add ` <!-- ` before "<Valve ClassNam and 
-                          0:0:1" (2nd line end) ` --> `
+Add ` <!-- ` before <Valve ClassNam and 
+                          0:0:1> (2nd line end) ` --> `
 ![image](https://user-images.githubusercontent.com/111989928/199544536-01499aef-84c4-496c-9949-525466342aef.png)
     
 <
@@ -116,7 +116,10 @@ cd /opt/apache-tomcat-9.0.68/bin
 ```
 After editing both context.xml files now open the manager app it will open
  
+![image](https://user-images.githubusercontent.com/111989928/199548711-21756b74-44d2-4873-afe0-0b1b6ab5ca82.png)
 
+ Now create Users with Roles
+ 
 
 
 
