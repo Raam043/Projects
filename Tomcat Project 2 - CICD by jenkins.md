@@ -5,7 +5,8 @@
 
 1 for Tomcat
 
-## 2. `On Server 1` Install jenkins + Maven
+## 2. `On Server 1` 
+### 2.1 Install jenkins + Maven
 ```sh
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -22,7 +23,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bi
 tar -xzvf apache-maven-3.8.6-bin.tar.gz
 ```
 
-Setup the environment setting for Java and Maven
+### 2.2 Setup the environment setting for Java and Maven
 ```sh
 cd
 vi .bash_profile
