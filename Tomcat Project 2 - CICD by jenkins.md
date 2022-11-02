@@ -183,7 +183,12 @@ Containers = Browse - Tomcat 9.x Remote
 
 Add Credentials using jenkins symbol
 ![image](https://user-images.githubusercontent.com/111989928/199553822-e454b65a-c064-4207-a874-47aeb03a5447.png)
+![image](https://user-images.githubusercontent.com/111989928/199553951-1f82967a-db6b-4dc0-8ff9-cf77c2d18a00.png)
 
+    
+Add URL of Tomcat Server with Port
+
+![image](https://user-images.githubusercontent.com/111989928/199554059-4b5fd610-71f6-4b3d-a7d9-b1073d7bf6ef.png)
     
  
     
