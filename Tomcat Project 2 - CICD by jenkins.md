@@ -5,8 +5,7 @@
 
 1 for Tomcat
 
-## 2. `On Server 1` 
-### 2.1 Install jenkins + Maven
+## 2. `On Server 1` Install jenkins + Maven
 ```sh
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -23,7 +22,7 @@ wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bi
 tar -xzvf apache-maven-3.8.6-bin.tar.gz
 ```
 
-### 2.2 Setup the environment setting for Java and Maven
+Setup the environment setting for Java and Maven
 ```sh
 cd
 vi .bash_profile
@@ -78,5 +77,25 @@ tar -xzvf apache-tomcat-9.0.68.tar.gz
 mkdir /opt/apache-tomcat-9.0.68/webapps/RRR
 ```
 
+Edit the `Context.xml` file to enable public login for Host manager
 
+```sh
+vi /opt/apache-tomcat-9.0.68/webapps/host-manager/META-INF/context.xml
+```
+```sh
+vi 
+```
+```diff
+- Before
+```
+![image](https://user-images.githubusercontent.com/111989928/199543146-bd741583-aa7d-46c3-82b6-ce81f3eac789.png)
+
+
+```diff
++ After
+```
+![image](https://user-images.githubusercontent.com/111989928/199544137-4797e01d-2150-4e83-af59-d190ef6dab53.png)
+
+Add `<!--` before "<Valve ClassNam and 
+                          0:0:1" (2nd line end) `-->`
 
