@@ -44,5 +44,8 @@ Release 2+more nodes using Ansible master AMI
 Connect with nodes from Master using ssh + nodes public ip
 ![image](https://user-images.githubusercontent.com/111989928/199686227-5a499e76-5d58-4d0b-8ffb-fe0ba319db2e.png)
 
+Connect with nodes from Master using ansible playbook - nodes private ip
+![image](https://user-images.githubusercontent.com/111989928/199686769-2fb3569a-0cfc-4a5c-875d-0f61d5454b38.png)
+
 
 
