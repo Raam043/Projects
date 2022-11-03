@@ -199,17 +199,3 @@ Output
 ![image](https://user-images.githubusercontent.com/111989928/199560877-a4e5d17e-516b-476e-974a-5d3637e8fad5.png)
 
     
-
-# Project :- Application deploying on Tomcat using Tomcat manager role and user by Jenkins & Maven (Deploying on Docker container) - 2 of 2
-
-Above all Installation will be remain same and additionally installing Docker on `Server 1 - Jenkins`
-```sh
-yum update -y
-yum install docker -y
-systemctl enable docker
-systemctl start docker
-yum install pip -y
-pip install docker-py
-sudo chmod 666 /var/run/docker.sock
-```
-    
