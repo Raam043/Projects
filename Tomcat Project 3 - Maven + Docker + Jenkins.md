@@ -82,9 +82,15 @@ Create "Maven Project"  on jenkins
 `BUILD` =  pom.xml and goal will be blank
 ![image](https://user-images.githubusercontent.com/111989928/199552287-ec66d95b-efab-45b1-95c4-413cb2db36ed.png)
 
- 
-`Post-build actions` = Deploy war/ear to a container
-    
-![image](https://user-images.githubusercontent.com/111989928/199553064-192267cd-3454-4b52-b896-fe5e7d7a5b7f.png)
+`POST STEPS` = Execute shell
+![image](https://user-images.githubusercontent.com/111989928/199665184-718d138d-80ed-4db4-8e22-124faaad3c16.png)
+Coping the webapp.war to project folder and building the images with help of tomcat blank + webapp.war
+```sh
+cp /var/lib/jenkins/workspace/Tomcat-Maven-Docker/webapp/target/webapp.war /var/lib/jenkins/workspace/Tomcat-Maven-Docker/
+docker stop test & docker rm -f test & docker image rm -f test & docker build -t test .
+docker run --name test -d -p 8090:8080 test
+```
+
+
 
 
