@@ -69,3 +69,22 @@ For `Java`
 For `Maven`
 
 ![image](https://user-images.githubusercontent.com/111989928/199538740-89981c5f-c5f4-42d0-a0d5-66bfa2e685e3.png)
+
+
+Create "Maven Project"  on jenkins
+![image](https://user-images.githubusercontent.com/111989928/199661512-9fdd1f33-3e85-466a-a9db-b470c421f067.png)
+
+
+`Source Code Management` = Git with main Branch
+![image](https://user-images.githubusercontent.com/111989928/199552014-0318097f-842b-43f8-8f98-0f0de28de376.png)
+
+    
+`BUILD` =  pom.xml and goal will be blank
+![image](https://user-images.githubusercontent.com/111989928/199552287-ec66d95b-efab-45b1-95c4-413cb2db36ed.png)
+
+ 
+`Post-build actions` = Deploy war/ear to a container
+    
+![image](https://user-images.githubusercontent.com/111989928/199553064-192267cd-3454-4b52-b896-fe5e7d7a5b7f.png)
+
+
