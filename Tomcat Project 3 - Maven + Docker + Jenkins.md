@@ -1,4 +1,4 @@
-# Project :- Ddeploying Webapp on tomcat docker container using Maven + Jenkins - CICD
+# Project :- Deploying Webapp on tomcat docker container using Maven + Jenkins - CICD
 
 Install Jenkins + docker + Maven + Git
 ```sh
