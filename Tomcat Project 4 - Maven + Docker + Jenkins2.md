@@ -37,3 +37,12 @@ ssh localhost
 Now Create the `AMI` for master to release nodes
 ![image](https://user-images.githubusercontent.com/111989928/199684790-6867d599-85b3-48c8-b7e2-03359b514a86.png)
 
+Release 2+more nodes using Ansible master AMI 
+
+![image](https://user-images.githubusercontent.com/111989928/199685788-fe141f37-41a0-47ae-8c86-b56d1083e262.png)
+
+Connect with nodes from Master using ssh + nodes public ip
+![image](https://user-images.githubusercontent.com/111989928/199686227-5a499e76-5d58-4d0b-8ffb-fe0ba319db2e.png)
+
+
+
