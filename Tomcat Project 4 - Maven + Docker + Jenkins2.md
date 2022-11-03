@@ -2,7 +2,7 @@
 
 Release 1 linux server for Ansible master 
 
-Install Docker and make ssh setting
+Install Ansible + Docker 
 ```sh
 yum update -y
 yum install docker -y
@@ -11,9 +11,10 @@ systemctl start docker
 yum install pip -y
 pip install docker-py
 yum install git -y
+amazon-linux-extras install ansible2 -y
 ```
 
-Generate SSH password 
+Generate SSH password to set the passwordless connection
 ```sh
 cd
 ssh-keygen
@@ -32,3 +33,7 @@ and try ssh localhost and exit
 ssh localhost
 ```
 ![image](https://user-images.githubusercontent.com/111989928/199684319-1299b13f-89a6-4ae5-bbfc-e0663d22c5f6.png)
+
+Now Create the `AMI` for master to release nodes
+![image](https://user-images.githubusercontent.com/111989928/199684790-6867d599-85b3-48c8-b7e2-03359b514a86.png)
+
