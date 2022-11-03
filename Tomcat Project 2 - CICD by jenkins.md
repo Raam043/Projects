@@ -196,6 +196,5 @@ Add URL of Tomcat Server with Port
  
 Output
     
-![image](https://user-images.githubusercontent.com/111989928/199560877-a4e5d17e-516b-476e-974a-5d3637e8fad5.png)
+![image](https://user-images.githubusercontent.com/111989928/199779834-89c44988-9911-42db-8804-589f75c2ebe4.png)
 
-    
