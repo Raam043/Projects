@@ -1,6 +1,6 @@
 # Project :- Deploying Webapp on tomcat docker container using Maven + Jenkins - CICD
 
-Install Jenkins + docker + Maven + Git
+Install Jenkins + docker + Maven + Ansible + Git
 ```sh
 yum update -y
 wget -O /etc/yum.repos.d/jenkins.repo \
@@ -18,6 +18,7 @@ systemctl start docker
 yum install pip -y
 pip install docker-py
 sudo chmod 666 /var/run/docker.sock
+amazon-linux-extras install ansible2 -y
 mkdir /opt/maven
 cd /opt/maven
 wget https://dlcdn.apache.org/maven/maven-3/3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz
@@ -59,6 +60,7 @@ Once opened the jenkins download the plugins for maven project @ Manage jenkins 
 * Maven Invoker
 * ssh
 * Publish over ssh
+* Ansible
 
 Setup the tools @ manage jenkins > Global tool configuration
 
@@ -69,6 +71,11 @@ For `Java`
 For `Maven`
 
 ![image](https://user-images.githubusercontent.com/111989928/199538740-89981c5f-c5f4-42d0-a0d5-66bfa2e685e3.png)
+
+For `Ansible`
+
+![image](https://user-images.githubusercontent.com/111989928/199682554-37bef8fe-a0be-4f3a-8e68-bbfa70158549.png)
+
 
 
 Create "Maven Project"  on jenkins
