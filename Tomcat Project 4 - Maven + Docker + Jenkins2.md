@@ -48,4 +48,36 @@ Connect with nodes from Master using ansible playbook - nodes private ip
 ![image](https://user-images.githubusercontent.com/111989928/199686769-2fb3569a-0cfc-4a5c-875d-0f61d5454b38.png)
 
 
+Create `Pipeline Project` and add below script 
+
+```sh
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/CICD-Git-jenkins-maven-tomcat.git'
+            }
+        }
+        stage('Image Pushing to DockerHub') {
+            steps {
+                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
+                    sh 'docker tag test raam043/tomcat-project'
+                    sh 'docker login -u raam043 -p ${DP}'
+                    sh 'docker push raam043/tomcat-project'
+            }
+        }
+        }
+        stage('Ansible Playbook for webapp deploy') {
+            steps {
+                ansiblePlaybook credentialsId: 'Ansible-ssh', disableHostKeyChecking: true, installation: 'Ansible', inventory: 'nodes.inv', playbook: 'tomcat-project.yml'
+            }
+        }
+    }
+}
+```
+
+![image](https://user-images.githubusercontent.com/111989928/199778371-4b9f44f0-4f28-4f0f-a8f2-14fd3fa00c8b.png)
+
 
