@@ -1,4 +1,5 @@
 ## Project :- Installing Docker, Running Images and Containers ( Manual + Automation CICD pipeline)
+![image](https://user-images.githubusercontent.com/111989928/199915509-0d3f5c0f-3d26-417d-bee4-f73f5b6e63cb.png)
 
 
 
