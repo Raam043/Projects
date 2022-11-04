@@ -1,4 +1,7 @@
-## Terraform to AWS Pipeline process
+## Terraform IAC -  AWS Pipeline
+
+![image](https://user-images.githubusercontent.com/111989928/199921704-c51a8b64-1c76-4ceb-8949-013381ff8e20.png)
+
 
 Prerequisition:
 1. Jenkin server
