@@ -1,6 +1,5 @@
 # Setup Kubernetes Cluster on AWS using eksctl
-
-You can follow same procedure in the official  AWS document [Getting started with Amazon EKS – eksctl](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)   
+ 
 
 #### Pre-requisites: 
   - an EC2 Instance 
@@ -18,6 +17,8 @@ You can follow same procedure in the official  AWS document [Getting started wit
    echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
    kubectl version --short --client
    ```
+   ![image](https://user-images.githubusercontent.com/111989928/200128560-6bd07abd-151a-4e71-8d28-5dd32f29686f.png)
+
 2. Setup eksctl   
    a. Download and extract the latest release   
    b. Move the extracted binary to /usr/local/bin   
@@ -28,6 +29,8 @@ You can follow same procedure in the official  AWS document [Getting started wit
    eksctl version
    export PATH=$PATH:/usr/local/bin/
    ```
+   ![image](https://user-images.githubusercontent.com/111989928/200128535-2c7b187c-c00d-4e1a-a77f-2d94cda8f858.png)
+
   
 3. Create an IAM Role and attache it to EC2 instance    
    `Note: create IAM user with programmatic access if your bootstrap system is outside of AWS`   
@@ -37,6 +40,8 @@ You can follow same procedure in the official  AWS document [Getting started wit
    AdministratorAccess
    AmazonVPCFullAccess
    AWSCloudFormationFullAccess
+   ![image](https://user-images.githubusercontent.com/111989928/200128479-77e1c6d3-5f8b-4807-a5c4-363b3cb5e16c.png)
+
 
 4. Create your cluster and nodes 
    ```sh
@@ -52,6 +57,16 @@ You can follow same procedure in the official  AWS document [Getting started wit
    --region us-east-2 \
    --node-type t2.small
     ```
+   ![image](https://user-images.githubusercontent.com/111989928/200128583-9f522c17-ace6-43b0-8a27-ce2b2631a025.png)
+   
+   It will create Cloudformation stack
+   ![image](https://user-images.githubusercontent.com/111989928/200128625-747f0080-0634-4f3d-87be-4d1051a9afe5.png)
+   
+   EC2 instances for nodes.
+   ![image](https://user-images.githubusercontent.com/111989928/200128648-26bda5e6-64be-41e3-92af-84ae058e8738.png)
+   
+   Validate the nodes "Kubectl get nodes"
+   ![image](https://user-images.githubusercontent.com/111989928/200128668-a788ee9f-e0cd-4763-ba12-04795ade8809.png)
 
 5. To delete the EKS clsuter 
    ```sh 
