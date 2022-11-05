@@ -65,9 +65,15 @@
    EC2 instances for nodes.
    ![image](https://user-images.githubusercontent.com/111989928/200128648-26bda5e6-64be-41e3-92af-84ae058e8738.png)
    
-   Validate the nodes "Kubectl get nodes"
-   ![image](https://user-images.githubusercontent.com/111989928/200128668-a788ee9f-e0cd-4763-ba12-04795ade8809.png)
+   Validate the Cluster and nodes 
+   ```sh 
+   eksctl get cluster --region us-east-2
+   kubectl get nodes
+   kubectl get all
+   ```
+   ![image](https://user-images.githubusercontent.com/111989928/200128893-263b18f4-4601-4a5a-9c11-754a72af0260.png)
 
+   
 5. To delete the EKS clsuter 
    ```sh 
    eksctl delete cluster ramesh-cluster --region us-east-2
