@@ -81,6 +81,9 @@
    ```
    ![image](https://user-images.githubusercontent.com/111989928/200129107-e811fba1-afbf-4db1-921a-4263d1bda9c7.png)
    
+   ![image](https://user-images.githubusercontent.com/111989928/200129469-3decf656-8716-46ac-b3e5-068600bb98c1.png)
+
+   
    It will auto generate the Load balancer dns to listen
    
    ![image](https://user-images.githubusercontent.com/111989928/200129234-133d3d2d-a8d5-4b03-bd5b-2ae930e44381.png)
