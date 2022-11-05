@@ -65,7 +65,7 @@
    EC2 instances for nodes.
    ![image](https://user-images.githubusercontent.com/111989928/200128648-26bda5e6-64be-41e3-92af-84ae058e8738.png)
    
-   Validate the Cluster and nodes 
+   Validate the Cluster and nodes status
    ```sh 
    eksctl get cluster --region us-east-2
    kubectl get nodes
@@ -73,14 +73,18 @@
    ```
    ![image](https://user-images.githubusercontent.com/111989928/200128893-263b18f4-4601-4a5a-9c11-754a72af0260.png)
 
+
+5. Validate your cluster using by creating a pod 
+   ```sh 
+   kubectl create deployment myapp --image=raam043/nginx --replicas=3 --port=80
+   kubectl expose deployment myapp --port=80 --type=LoadBalancer
+   ```
+   ![image](https://user-images.githubusercontent.com/111989928/200129107-e811fba1-afbf-4db1-921a-4263d1bda9c7.png)
    
-5. To delete the EKS clsuter 
+   It will auto generate the Load balancer dns to listen
+   
+6. To delete the EKS clsuter 
    ```sh 
    eksctl delete cluster ramesh-cluster --region us-east-2
    ```
-   
-6. Validate your cluster using by creating by checking nodes and by creating a pod 
-   ```sh 
-   kubectl get nodes
-   kubectl run pod tomcat --image=tomcat 
-   ```
+
