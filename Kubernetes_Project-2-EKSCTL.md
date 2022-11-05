@@ -83,6 +83,9 @@
    
    It will auto generate the Load balancer dns to listen
    
+   ![image](https://user-images.githubusercontent.com/111989928/200129234-133d3d2d-a8d5-4b03-bd5b-2ae930e44381.png)
+
+   
 6. To delete the EKS clsuter 
    ```sh 
    eksctl delete cluster ramesh-cluster --region us-east-2
