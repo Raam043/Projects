@@ -31,3 +31,6 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 ```
+2. Release 2 server to make Kubernetes cluster set up
+
+```sh
