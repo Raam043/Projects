@@ -36,4 +36,13 @@ systemctl start jenkins
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
 
 3. Now Setup the Jenkins and install below Plugins
-`
+
+
+
+
+
+
+
+Kubenetes Master screen before deployment
+![image](https://user-images.githubusercontent.com/111989928/200178676-c992b34b-cad8-49fd-bfe6-1a40b1f8e901.png)
+
