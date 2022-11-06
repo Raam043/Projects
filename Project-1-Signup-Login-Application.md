@@ -69,4 +69,23 @@ Kubenetes Master screen before deployment
 ![image](https://user-images.githubusercontent.com/111989928/200178676-c992b34b-cad8-49fd-bfe6-1a40b1f8e901.png)
 
 After deployment 
+
 ![image](https://user-images.githubusercontent.com/111989928/200187426-e23b577f-5568-479c-9f91-7c863adbfa75.png)
+
+
+
+`Output`
+
+
+![image](https://user-images.githubusercontent.com/111989928/200188753-d92aad4c-f660-47a3-89a9-7864702598ac.png)
+
+
+![image](https://user-images.githubusercontent.com/111989928/200188737-177e2ba2-bd7e-40d4-b754-6b0c446a1e98.png)
+
+![image](https://user-images.githubusercontent.com/111989928/200188772-487730b2-5961-47db-806a-fe8b4366f11e.png)
+
+
+
+
+
+
