@@ -34,3 +34,6 @@ systemctl start jenkins
 2. Release 2 server to make Kubernetes cluster set up
 
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
+
+3. Now Setup the Jenkins and install below Plugins
+`
