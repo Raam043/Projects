@@ -1,4 +1,4 @@
-# Signup-Login Application CICD
+# Signup-Login Application CICD (HTML+CSS Project)
 
 ### Requirements to complete CICD:- 
 
