@@ -86,6 +86,11 @@
    mkdir -p $HOME/.kube
    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
+   
+   mkdir -p $HOME/.kube
+   sudo cp -i /etc/kubernetes/kubelet.conf $HOME/.kube/config
+   sudo chown $(id -u):$(id -g) $HOME/.kube/config**
+   
    ```
    
    if already Initialized use Cluster join command to get token details to join workers
