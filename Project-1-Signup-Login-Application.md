@@ -98,7 +98,11 @@ Git = https://github.com/Raam043/Sign_Up_-_Sign_In.git
 
 Docker Image build and push to registry
 ```sh
-
+docker image rm -f raam043/login-project
+docker build -t raam043/login-project .
+docker login -u raam043 -p $PASS
+docker push raam043/login-project
+```
 
 ![image](https://user-images.githubusercontent.com/111989928/200188455-df406846-e795-489f-90d9-542f803e3b55.png)
 
