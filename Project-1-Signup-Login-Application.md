@@ -149,17 +149,11 @@ Copy all Output and paste on Credentials for Master
 
 
 
-`Createing Pod @ Kubenetes Master`
+`Deploying Application @ Kubenetes Master`
 
-![image](https://user-images.githubusercontent.com/111989928/200278402-45efd72b-0fe3-4b95-b288-898a9bab95eb.png)
+![image](https://user-images.githubusercontent.com/111989928/200303498-7f6e8c92-ea8b-48d8-bec7-01989a26f1d8.png)
 
 
-
-`Createing and Deploying/Service @ Kubenetes Master`
-
-![image](https://user-images.githubusercontent.com/111989928/200278675-274d2066-6c1c-4f83-a3a3-f7e9559cd021.png)
-
-Successfully Job created 
 
 
 
