@@ -67,6 +67,9 @@ service sshd restart
 `ssh2`
 `Publish over ssh`
 `ssh`
+`Docker Pipeline`
+`docker-build-step`
+`CloudBees Docker Build and Publish plugin`
 `Kuberenetes deploy-custom` Old version should be used (1.0) stored @ **[Kubernetes Plugin](https://github.com/Raam043/Sign_Up_-_Sign_In/blob/main/kubernetes-cd.hpi)**
 
 https://github.com/Raam043/Sign_Up_-_Sign_In/raw/main/kubernetes-cd.hpi
@@ -96,35 +99,29 @@ export PASS="DockerHub_Password"
 
 Git = https://github.com/Raam043/Sign_Up_-_Sign_In.git
 
-Docker Image build and push to registry
+`Build Steps` Select = `Execute shell` Remove existing images
+
 ```sh
 docker image rm -f raam043/login-project
-docker build -t raam043/login-project .
-docker login -u raam043 -p $PASS
-docker push raam043/login-project
+docker image rm -f nginx
 ```
+![image](https://user-images.githubusercontent.com/111989928/200275474-13c09fb9-570c-4325-b1d1-12388845aa18.png)
 
-![image](https://user-images.githubusercontent.com/111989928/200188455-df406846-e795-489f-90d9-542f803e3b55.png)
 
-Stopping existing resources 
+Select `Docker Build and Publish` to registry ( Add DockerHub credentials to push images)
 
-![image](https://user-images.githubusercontent.com/111989928/200188477-51c59996-d68b-43f3-9435-e1cd213295b5.png)
+![image](https://user-images.githubusercontent.com/111989928/200275901-a0b4ccbd-dcca-4966-b388-cf1fe72e65da.png)
 
+![image](https://user-images.githubusercontent.com/111989928/200275925-43da8ada-ddc2-474b-8af2-daf3c61c07b7.png)
+
+
+Select `Build Steps` = `Deploy to Kubernetes`
 Create Pod @ kubernetes Master
 
-![image](https://user-images.githubusercontent.com/111989928/200188526-38fc4b91-f72d-4ab4-8df4-653c17952c99.png)
-
-Deploy / Service start for the built docker image
-
-![image](https://user-images.githubusercontent.com/111989928/200188558-df71b32c-0348-42b6-8e2c-0b94a0acf11f.png)
 
 
-Kubenetes Master screen before deployment
-![image](https://user-images.githubusercontent.com/111989928/200178676-c992b34b-cad8-49fd-bfe6-1a40b1f8e901.png)
 
-After deployment 
 
-![image](https://user-images.githubusercontent.com/111989928/200187426-e23b577f-5568-479c-9f91-7c863adbfa75.png)
 
 
 
