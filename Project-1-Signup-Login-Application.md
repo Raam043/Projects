@@ -108,6 +108,9 @@ docker image rm -f nginx
 ![image](https://user-images.githubusercontent.com/111989928/200275474-13c09fb9-570c-4325-b1d1-12388845aa18.png)
 
 
+
+
+
 Select `Docker Build and Publish` to registry ( Add DockerHub credentials to push images)
 
 ![image](https://user-images.githubusercontent.com/111989928/200275901-a0b4ccbd-dcca-4966-b388-cf1fe72e65da.png)
@@ -115,8 +118,26 @@ Select `Docker Build and Publish` to registry ( Add DockerHub credentials to pus
 ![image](https://user-images.githubusercontent.com/111989928/200275925-43da8ada-ddc2-474b-8af2-daf3c61c07b7.png)
 
 
+
+
+
+
+
 Select `Build Steps` = `Deploy to Kubernetes`
+
+
 Create Pod @ kubernetes Master
+
+Add Credentials of Master to deploy services on Kubernetes cluster
+
+to get the password of Master login on master server and run the below command to get the config details
+```sh
+cat .kube/config
+```
+Output
+![image](https://user-images.githubusercontent.com/111989928/200277577-403fd191-56bc-467a-88d2-0303ed058e20.png)
+
+Copy all Output and paste on Credentials for Master
 
 
 
