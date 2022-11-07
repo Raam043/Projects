@@ -39,7 +39,28 @@ set `root` password @ Kubernetes Master ( it will use on jenkins ssh connection)
 ```sh
 passwd root
 ```
-Enter password
+Enter password & Set ssh setting to enable passwordless connection from jenkins
+```sh
+vi /etc/ssh/sshd_config
+```
+Change the setting as per below
+
+```diff
+- Before 
+```
+![image](https://user-images.githubusercontent.com/111989928/198711105-0672a166-bf18-4922-a0dd-074bf7f75f8d.png)
+```diff
++ After
+```
+![image](https://user-images.githubusercontent.com/111989928/198711366-3b7384d3-e18c-42c4-b966-149aeaefbcd6.png)
+
+Edit and Save 
+
+Restart the ssh service
+```sh
+service sshd restart
+```
+
 
 3. Now Setup the Jenkins and install below Plugins
 
