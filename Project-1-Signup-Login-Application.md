@@ -12,7 +12,7 @@ Docker : To build image and push image to DockerHub
 
 Kubernetes : Running Docker containers
 
-1. Release one server to install Jenkins + Docker
+## 1. Release one server to install Jenkins + Docker
 
 ```sh
 yum update -y
@@ -31,7 +31,7 @@ yum install jenkins -y
 systemctl enable jenkins
 systemctl start jenkins
 ```
-2. Release 2 server to make Kubernetes cluster set up
+## 2. Release 2 server to make Kubernetes cluster set up
 
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
 
@@ -62,7 +62,7 @@ service sshd restart
 ```
 
 
-3. Now Setup the Jenkins and install below Plugins
+## 3. Now Setup the Jenkins and install below Plugins
 
 `ssh2`
 `Publish over ssh`
@@ -92,7 +92,7 @@ export PASS="DockerHub_Password"
 ```
 
 
-Create Freestyle project 
+## 4. Create Freestyle project 
 
 Git = https://github.com/Raam043/Sign_Up_-_Sign_In.git
 
