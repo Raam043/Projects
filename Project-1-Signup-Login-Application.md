@@ -36,11 +36,24 @@ systemctl start jenkins
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
 
 3. Now Setup the Jenkins and install below Plugins
+
 `ssh2`
+`Publish over ssh`
 `ssh`
-`Kuberenetes deploy-custom` Old version should be used (1.0)
+`Kuberenetes deploy-custom` Old version should be used (1.0) stored @ **[Kubernetes Plugin](https://github.com/Raam043/Sign_Up_-_Sign_In/blob/main/kubernetes-cd.hpi)**
+
+https://github.com/Raam043/Sign_Up_-_Sign_In/raw/main/kubernetes-cd.hpi
+
+Deploy plugin at advance setting
+
+![image](https://user-images.githubusercontent.com/111989928/200244582-63b42e64-93da-47d3-88d2-887f995d9687.png)
+
+
+Open Jenkins Application and 
 
 Setup the connection for Kubernetes Master
+
+
 
 
 
