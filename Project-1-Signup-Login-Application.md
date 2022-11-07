@@ -97,6 +97,8 @@ export PASS="DockerHub_Password"
 Git = https://github.com/Raam043/Sign_Up_-_Sign_In.git
 
 Docker Image build and push to registry
+```sh
+
 
 ![image](https://user-images.githubusercontent.com/111989928/200188455-df406846-e795-489f-90d9-542f803e3b55.png)
 
