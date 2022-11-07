@@ -1,5 +1,11 @@
 # Signup-Login Application CICD (HTML+CSS Project)
 
+
+![image](https://user-images.githubusercontent.com/111989928/200379298-29db6f9d-f9e9-43b8-ad99-89796d960f3b.png)
+
+
+
+
 ### Requirements to complete CICD:- 
 
 AWS_3_Serrvers : 1 for Jenkins + Docker | 1 for Kubernetes Master | 1 for Kubernetes worker/node
