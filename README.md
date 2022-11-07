@@ -1,5 +1,6 @@
-# Projects Details - Click on image to open projects
-
+```diff
++# Projects Details - Click on image to open projects
+```
 
 ## 1. `Html+CSS Application CICD` 
 
