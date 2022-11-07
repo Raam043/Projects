@@ -119,6 +119,10 @@ Select `Docker Build and Publish` to registry ( Add DockerHub credentials to pus
 
 
 
+Select `Build Steps` = `Remote Shell` Stopping all existing resources 
+
+
+![image](https://user-images.githubusercontent.com/111989928/200278952-c5e8e9f6-0246-4dda-a964-749ee0d76dcf.png)
 
 
 
@@ -137,9 +141,13 @@ cat .kube/config
 Output
 ![image](https://user-images.githubusercontent.com/111989928/200277577-403fd191-56bc-467a-88d2-0303ed058e20.png)
 
+
 Copy all Output and paste on Credentials for Master
 
 ![image](https://user-images.githubusercontent.com/111989928/200278321-96c79bc1-9104-434e-90a9-e025f2e2c474.png)
+
+
+
 
 `Createing Pod @ Kubenetes Master`
 
@@ -151,12 +159,13 @@ Copy all Output and paste on Credentials for Master
 
 ![image](https://user-images.githubusercontent.com/111989928/200278675-274d2066-6c1c-4f83-a3a3-f7e9559cd021.png)
 
-
+Successfully Job created 
 
 
 
 
 `Output`
+
 
 
 ![image](https://user-images.githubusercontent.com/111989928/200188753-d92aad4c-f660-47a3-89a9-7864702598ac.png)
