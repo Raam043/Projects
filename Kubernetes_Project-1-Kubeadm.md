@@ -92,6 +92,7 @@
    sudo chown $(id -u):$(id -g) $HOME/.kube/config**
    
    ```
+   Restart the Servers and connect it again
    
    if already Initialized use Cluster join command to get token details to join workers
    ```sh
@@ -102,18 +103,14 @@
     sha256:51033461996687f19049f9d3dd89e5e9b3e59acd53af17c1ab67e724a1f59bb7   
    ```
 
-## `On Worker Nodes:`
-1.  Run the kubeadm join command on worker nodes to join cluster
-    ```sh
-    kubeadm join 172.31.25.79:6443 --token 8haora.ebxx9dbbu5eyiqv2 --discovery-token-ca-cert-hash
-    sha256:51033461996687f19049f9d3dd89e5e9b3e59acd53af17c1ab67e724a1f59bb7
-    ```
   
 ## `On Master Node:`  
 1.  Verifying the cluster To Get Nodes status / Calico communication installer
     ```sh
     kubectl get nodes
     kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.4/manifests/tigera-operator.yaml
+    
+    kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
     
     kubectl get pods -n kube-system -o wide
     kubectl get pods
