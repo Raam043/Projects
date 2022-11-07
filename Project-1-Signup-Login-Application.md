@@ -35,6 +35,8 @@ systemctl start jenkins
 
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
 
+set `root` password @ Kubernetes Master ( it will use on jenkins ssh connection)
+
 3. Now Setup the Jenkins and install below Plugins
 
 `ssh2`
@@ -54,7 +56,15 @@ Open Jenkins Application and
 Setup the connection for Kubernetes Master
 
 
+![image](https://user-images.githubusercontent.com/111989928/200245147-069f0a9c-514d-4943-b65f-b972e26bc569.png)
 
+
+
+
+Set DockerHub password as Environment variable @ Jenkins server to Push docker images to registry 
+```sh
+export PASS="DockerHub_Password"
+```
 
 
 Create Freestyle project 
