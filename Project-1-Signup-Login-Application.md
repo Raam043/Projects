@@ -36,6 +36,10 @@ systemctl start jenkins
 For Setup the Kubernetes Cluster please follow instructions from this Document => **[Kubernetes Cluster Setup](https://github.com/Raam043/Projects/blob/main/Kubernetes_Project-1-Kubeadm.md)**
 
 set `root` password @ Kubernetes Master ( it will use on jenkins ssh connection)
+```sh
+passwd root
+```
+Enter password
 
 3. Now Setup the Jenkins and install below Plugins
 
