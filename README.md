@@ -9,12 +9,17 @@ Application → Git → Jenkins → Docker (Image Build + Push to Registry) → 
 <a href="https://github.com/Raam043/Projects/blob/59e39c6d29e03f5e06e10eaca24739ad9053942e/Project-1-Signup-Login-Application.md" /> <img src=https://user-images.githubusercontent.com/111989928/200379298-29db6f9d-f9e9-43b8-ad99-89796d960f3b.png /> </a>
 
 
-## 2. Terraform Automation 
+## 2. `Terraform Automation`
 
 
 <a href="https://github.com/Raam043/Projects/blob/a16749bbb93f164faadcea69cc5d417e8b46b9a7/Terraform%20Project%201%20-%20Terraform%20to%20AWS%20Pipeline%20process.md" /> <img src= https://user-images.githubusercontent.com/111989928/199921704-c51a8b64-1c76-4ceb-8949-013381ff8e20.png /> </a>
 
 
-## 3. Docker CICD
+## 3. `Docker CICD`
 
 <a href="https://github.com/Raam043/Projects/blob/4366040a549869f840d8a025a7f9853cf334c17d/Docker%20Project%201%20-%20Manual%20+%20Automation%20CICD.md" /> <img src= https://user-images.githubusercontent.com/111989928/199915509-0d3f5c0f-3d26-417d-bee4-f73f5b6e63cb.png /> </a>
+
+
+## 3. `Docker CICD with Ansible`
+
+<a href="https://github.com/Raam043/Projects/blob/e727845349771e3bd79c3350a92197075df7aef4/Docker%20Project%203%20-%20Deploying%20application%20%20on%20Ansible%20Nodes.md" /> <img src= https://user-images.githubusercontent.com/111989928/198696150-0ec910dc-096f-402e-8917-2c719133825e.png /> </a>
