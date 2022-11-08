@@ -23,3 +23,8 @@ Application → Git → Jenkins → Docker (Image Build + Push to Registry) → 
 ## 3. `Docker CICD with Ansible`
 
 <a href="https://github.com/Raam043/Projects/blob/e727845349771e3bd79c3350a92197075df7aef4/Docker%20Project%203%20-%20Deploying%20application%20%20on%20Ansible%20Nodes.md" /> <img src= https://user-images.githubusercontent.com/111989928/198696150-0ec910dc-096f-402e-8917-2c719133825e.png /> </a>
+
+
+## 4. `Maven based and containerised tomcat application deployment`
+
+<a href="https://github.com/Raam043/Projects/blob/97c69739e798542190581a393ff8cd1a5a2944d5/Part-1_Tomcat_Docker_Ansible_CICD.md" /> <img src= https://user-images.githubusercontent.com/111989928/199789631-97b25b65-b15e-475e-bab2-51391d7ad24a.png /> </a>
