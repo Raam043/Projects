@@ -1,5 +1,5 @@
 ```diff
-+ Projects Details - Click on image to open projects
++ Project's Architecture - Click on image to open projects
 ```
 
 ## 1. `Html+CSS Application CICD` 
