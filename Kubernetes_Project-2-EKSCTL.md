@@ -84,6 +84,10 @@
    ```
    ![image](https://user-images.githubusercontent.com/111989928/200795415-285bf9fa-5c71-4eef-9446-3dbc30b7c4db.png)
 
+   ```diff
+   +Scaling 
+   ```
+   
    ```sh
    kubectl scale deployment.apps/myapp --replicas=7
    ```
