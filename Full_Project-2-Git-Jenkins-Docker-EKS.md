@@ -79,6 +79,64 @@ Open Jenkins ➡ Manage Credentials ➡ System ➡ Global Credentials and add EK
 
 
 
+## 5. Create `Pipeline-Project` and below is the script for deploy
+
+```sh
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Raam043/Sign_Up_-_Sign_In.git'
+            }
+        }
+        stage('Docker Image Build') {
+            steps {
+                sh 'docker image rm -f raam043/eks-test & docker build -t raam043/eks-test .'
+            }
+        }
+        stage('Docker Image Push to Registry') {
+            steps {
+                withCredentials([string(credentialsId: 'DP', variable: 'DP')]) {
+                    sh 'docker login -u raam043 -p ${DP}'
+                    sh 'docker push raam043/eks-test'
+            }
+        }
+        }
+        stage('Deploying application on EKS') {
+            steps {
+                kubernetesDeploy configs: 'EKS-LB-Deployment.yml', kubeConfig: [path: ''], kubeconfigId: 'eks', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://']
+                
+            }
+        }
+        
+    }
+}
+node {
+  def remote = [:]
+  remote.name = 'Master'
+  remote.host = '3.143.252.254'
+  remote.user = 'root'
+  remote.password = 'admin123'
+  remote.allowAnyHosts = true
+  stage('SSH-EKS_MAster-Upgrading') {
+    sshCommand remote: remote, command: "kubectl rollout restart deployment"
+  }
+}
+
+```
+
+
+
+
+
+Output
+
+
+
+
 
 
 
