@@ -5,7 +5,8 @@
 
 ## Prerequisites: 
 1. System Requirements 
-    >Master & Nodes: t2.medium (2 CPUs and 4GB Memory)   
+    > Master: t2.medium (2 CPUs and 4GB Memory)
+    >> Nodes: t2.micro (1 CPUs and 2GB Memory) Normal 
      
 
 1. Open Below ports in the Security Group. 
@@ -86,36 +87,34 @@
    mkdir -p $HOME/.kube
    sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
    sudo chown $(id -u):$(id -g) $HOME/.kube/config
-   
-   mkdir -p $HOME/.kube
-   sudo cp -i /etc/kubernetes/kubelet.conf $HOME/.kube/config
-   sudo chown $(id -u):$(id -g) $HOME/.kube/config**
-   
+   kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.4/manifests/tigera-operator.yaml
    ```
    Restart the Servers and connect it again
+   
+    
    
    if already Initialized use Cluster join command to get token details to join workers
    ```sh
    kubeadm token create --print-join-command
-   
-   #Output
-    kubeadm join 172.31.25.79:6443 --token 8haora.ebxx9dbbu5eyiqv2 --discovery-token-ca-cert-hash
-    sha256:51033461996687f19049f9d3dd89e5e9b3e59acd53af17c1ab67e724a1f59bb7   
    ```
+   #Output
+   kubeadm join 172.31.25.79:6443 --token 8haora.ebxx9dbbu5eyiqv2 --discovery-token-ca-cert-hash
+   sha256:51033461996687f19049f9d3dd89e5e9b3e59acd53af17c1ab67e724a1f59bb7   
 
+   In nodes paste the token to connect with Master
+   
   
 ## `On Master Node:`  
 1.  Verifying the cluster To Get Nodes status / Calico communication installer
     ```sh
     kubectl get nodes
-    kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.24.4/manifests/tigera-operator.yaml
-    
-    kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
-    
     kubectl get pods -n kube-system -o wide
     kubectl get pods
     ```
 2.  If Master + Nodes not ready please check with Calico installer OR CNI
+    ```sh
+    kubectl apply -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+    ```
   
     ![image](https://user-images.githubusercontent.com/111989928/200110244-410e46bb-f6cb-4f71-957d-dfa218bcbbf0.png)
   
