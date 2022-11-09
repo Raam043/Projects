@@ -77,12 +77,13 @@
    ![image](https://user-images.githubusercontent.com/111989928/200128893-263b18f4-4601-4a5a-9c11-754a72af0260.png)
 
 
-5. Validate your cluster using by creating a pod 
+5. Validate your cluster using by creating a pod | Running my container
    ```sh 
    kubectl create deployment myapp --image=raam043/nginx --replicas=3 --port=80
    kubectl expose deployment myapp --port=80 --type=LoadBalancer
    ```
-   ![image](https://user-images.githubusercontent.com/111989928/200795415-285bf9fa-5c71-4eef-9446-3dbc30b7c4db.png)
+   ![image](https://user-images.githubusercontent.com/111989928/200796482-9d5dbacb-dece-4fad-b9cf-6b6dce91428d.png)
+
 
    ```diff
    +Scaling 
