@@ -82,9 +82,14 @@
    kubectl create deployment myapp --image=raam043/nginx --replicas=3 --port=80
    kubectl expose deployment myapp --port=80 --type=LoadBalancer
    ```
-   ![image](https://user-images.githubusercontent.com/111989928/200129107-e811fba1-afbf-4db1-921a-4263d1bda9c7.png)
+   ![image](https://user-images.githubusercontent.com/111989928/200795415-285bf9fa-5c71-4eef-9446-3dbc30b7c4db.png)
+
+   ```sh
+   kubectl scale deployment.apps/myapp --replicas=7
+   ```
    
-   ![image](https://user-images.githubusercontent.com/111989928/200129469-3decf656-8716-46ac-b3e5-068600bb98c1.png)
+   ![image](https://user-images.githubusercontent.com/111989928/200795737-445899d5-4550-4675-b766-9ee1e5de6a5b.png)
+
 
    
    It will auto generate the Load balancer dns to listen
