@@ -6,7 +6,8 @@
 ## Prerequisites: 
 1. System Requirements 
     > Master: t2.medium (2 CPUs and 4GB Memory)
-    >> Nodes: t2.micro (1 CPUs and 2GB Memory) Normal 
+    
+    > Nodes: t2.micro (1 CPUs and 2GB Memory) Normal 
      
 
 1. Open Below ports in the Security Group. 
