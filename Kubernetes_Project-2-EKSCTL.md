@@ -1,4 +1,7 @@
 # Setup Kubernetes Cluster on AWS using eksctl
+
+![image](https://user-images.githubusercontent.com/111989928/200792281-b1bfa380-a258-4258-8d3c-494f74b9b876.png)
+
  
 
 #### Pre-requisites: 
