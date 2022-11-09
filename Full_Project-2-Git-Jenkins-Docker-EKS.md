@@ -42,7 +42,7 @@ sudo chmod 666 /var/run/docker.sock
 ```
 
 
-Set up the Jenkins profile / application and download the Kubernetes plugin by Advanced setting
+## 3. Set up the Jenkins profile / application and download the Kubernetes plugin by Advanced setting
 
 https://github.com/Raam043/Sign_Up_-_Sign_In/raw/main/kubernetes-cd.hpi
 
@@ -51,7 +51,9 @@ Deploy plugin at advance setting
 ![image](https://user-images.githubusercontent.com/111989928/200826362-d76bf863-1837-4a67-baa4-6061dfc11bb8.png)
 
 
-Add the Credentials of EKS Master
+
+
+## 4. Add the Credentials of EKS Master
 
 
 Run the command on `EKS Master` to get config details 
@@ -62,6 +64,15 @@ cat /root/.kube/config
 Output 
 
 ![image](https://user-images.githubusercontent.com/111989928/200827198-b37bfc65-2327-49f1-98c0-f525bf341298.png)
+
+Open Jenkins ➡ Manage Credentials ➡ System ➡ Global Credentials and add EKS Master config details
+
+
+![image](https://user-images.githubusercontent.com/111989928/200828155-e65d50c9-76ca-4b6e-8c09-0067dded7c39.png)
+
+
+
+
 
 
 
