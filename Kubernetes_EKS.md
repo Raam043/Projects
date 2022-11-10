@@ -106,4 +106,3 @@
    ```sh 
    eksctl delete cluster ramesh-cluster --region us-east-2
    ```
-
