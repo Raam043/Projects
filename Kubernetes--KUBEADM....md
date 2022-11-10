@@ -1,5 +1,6 @@
 # Kubernetes Cluster installation using kubeadm & Running containers
 
+![image](https://user-images.githubusercontent.com/111989928/201100784-422f735e-dcd4-43ab-aaa4-02328e600a94.png)
 
 
 
