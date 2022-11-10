@@ -1,4 +1,4 @@
-# Project :- Deploy on Kubernetes using Git, Jenkins, Ansible
+# Project :- Deploy on Kubernetes using Git, Jenkins, Maven, Ansible
 
 
 Prerequisitions :- 
