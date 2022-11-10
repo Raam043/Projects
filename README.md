@@ -48,3 +48,8 @@ Application → Git → Jenkins → Docker (Image Build + Push to Registry) → 
 ## 7. `Amazon-EKS Kubernetes Setup`
 
 <a href="https://github.com/Raam043/Projects/blob/3ab8bec0f4f6131867d7d542e0757bfcdfa11939/Kubernetes_Project-2-EKSCTL.md" /> <img src= https://user-images.githubusercontent.com/111989928/200792281-b1bfa380-a258-4258-8d3c-494f74b9b876.png /> </a>
+
+
+## 8. `KOPS Setup on AWS`
+
+<a href="https://github.com/Raam043/Projects/blob/7101e5bb6887012bbf94e6030dac725658c9d660/Kubernetes--KOPS....md" /> <img src= https://user-images.githubusercontent.com/111989928/201100139-52687a3b-e5cf-4971-9d7c-918ae917c00a.png /> </a>
