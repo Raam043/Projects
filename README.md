@@ -38,7 +38,7 @@ Application → Git → Jenkins → Docker (Image Build + Push to Registry) → 
 
 
 
-## 6. `Docker CICD with Ansible`
+## 6. `Docker CICD with Ansible Only`
 
 <a href="https://github.com/Raam043/Projects/blob/e727845349771e3bd79c3350a92197075df7aef4/Docker%20Project%203%20-%20Deploying%20application%20%20on%20Ansible%20Nodes.md" /> <img src= https://user-images.githubusercontent.com/111989928/198696150-0ec910dc-096f-402e-8917-2c719133825e.png /> </a>
 
