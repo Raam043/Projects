@@ -47,13 +47,15 @@ Browse the S3 bucket which is created above
 
 ![Screenshot 2022-11-13 at 2 01 13 PM](https://user-images.githubusercontent.com/111989928/201512955-ee47f17e-ca60-4c33-8057-8fd593885b1d.png)
 
+`Select the Root file`
+
+![Screenshot 2022-11-13 at 5 00 35 PM](https://user-images.githubusercontent.com/111989928/201519433-a39c1da2-0cf5-4dfa-a554-2e9c3e59f0e8.png)
+
+
 After Creation it will generate the defualt Domain for content
 
 ![Screenshot 2022-11-13 at 2 08 29 PM](https://user-images.githubusercontent.com/111989928/201513236-a8efe225-36f4-462b-9ae0-2cc8bdef8ca1.png)
 
-`Select the Root file`
-
-![Screenshot 2022-11-13 at 5 00 35 PM](https://user-images.githubusercontent.com/111989928/201519433-a39c1da2-0cf5-4dfa-a554-2e9c3e59f0e8.png)
 
 
 Copy the Domain and open it on new tab to veryfication
