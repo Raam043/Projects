@@ -2,7 +2,11 @@
 
 
 
-## 1. Release `S3 bucket` to store content
+## 1 - for Public Bucket and Objects 
+
+
+### 1.  Release `S3 bucket` to store content
+
 
 ![Screenshot 2022-11-13 at 1 39 27 PM](https://user-images.githubusercontent.com/111989928/201512338-fd3da6c9-bb8c-460e-bc87-6fd285d3f15f.png)
 
@@ -37,7 +41,7 @@ https://s3.us-east-2.amazonaws.com/ramesh.in/index.html
 
 
 
-## 2. Create CloudFront Distribution
+### 2. Create CloudFront Distribution
 
 Browse the S3 bucket which is created above
 
@@ -52,7 +56,7 @@ Copy the Domain and open it on new tab to veryfication
 ![Screenshot 2022-11-13 at 2 09 49 PM](https://user-images.githubusercontent.com/111989928/201513268-3d20f0aa-4f18-454a-b1ee-be0c102a7c36.png)
 
 
-## 3. Create `Error Page` if content missed or under deployment progress.
+###  3. Create `Error Page` if content missed or under deployment progress.
 
 ![Screenshot 2022-11-13 at 2 11 23 PM](https://user-images.githubusercontent.com/111989928/201513354-7e165941-8521-4924-bca6-4ea8f2053d07.png)
 
