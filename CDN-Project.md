@@ -24,3 +24,33 @@ Open the Bucket and add content
 Grant Public Access
 
 ![Screenshot 2022-11-13 at 1 48 44 PM](https://user-images.githubusercontent.com/111989928/201512559-955f2004-e7c3-4c05-8b5b-ed5ab2828ac7.png)
+
+Use image for access teh file from https using below link
+
+![Screenshot 2022-11-13 at 1 58 37 PM](https://user-images.githubusercontent.com/111989928/201512873-dee8d534-588a-4a3a-86ad-946e1d77ff9d.png)
+
+
+
+https://s3.us-east-2.amazonaws.com/ramesh.in/index.html
+
+![Screenshot 2022-11-13 at 1 59 45 PM](https://user-images.githubusercontent.com/111989928/201512904-cad267de-e5b3-407d-9449-7871ee613bb0.png)
+
+
+
+## 2. Create CloudFront Distribution
+
+Browse the S3 bucket which is created above
+
+![Screenshot 2022-11-13 at 2 01 13 PM](https://user-images.githubusercontent.com/111989928/201512955-ee47f17e-ca60-4c33-8057-8fd593885b1d.png)
+
+After Creation it will generate the defualt Domain for content
+
+![Screenshot 2022-11-13 at 2 08 29 PM](https://user-images.githubusercontent.com/111989928/201513236-a8efe225-36f4-462b-9ae0-2cc8bdef8ca1.png)
+
+Copy the Domain and open it on new tab to veryfication
+
+![Screenshot 2022-11-13 at 2 09 49 PM](https://user-images.githubusercontent.com/111989928/201513268-3d20f0aa-4f18-454a-b1ee-be0c102a7c36.png)
+
+
+
+
