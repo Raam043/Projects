@@ -52,5 +52,10 @@ Copy the Domain and open it on new tab to veryfication
 ![Screenshot 2022-11-13 at 2 09 49 PM](https://user-images.githubusercontent.com/111989928/201513268-3d20f0aa-4f18-454a-b1ee-be0c102a7c36.png)
 
 
+## 3. Create `Error Page` if content missed or under deployment progress.
+
+![Screenshot 2022-11-13 at 2 11 23 PM](https://user-images.githubusercontent.com/111989928/201513354-7e165941-8521-4924-bca6-4ea8f2053d07.png)
+
+
 
 
