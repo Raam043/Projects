@@ -29,9 +29,7 @@ Grant Public Access
 
 ![Screenshot 2022-11-13 at 1 48 44 PM](https://user-images.githubusercontent.com/111989928/201512559-955f2004-e7c3-4c05-8b5b-ed5ab2828ac7.png)
 
-Use image for access teh file from https using below link
 
-![Screenshot 2022-11-13 at 1 58 37 PM](https://user-images.githubusercontent.com/111989928/201512873-dee8d534-588a-4a3a-86ad-946e1d77ff9d.png)
 
 
 
@@ -60,7 +58,8 @@ After Creation it will generate the defualt Domain for content
 
 Copy the Domain and open it on new tab to veryfication
 
-![Screenshot 2022-11-13 at 2 09 49 PM](https://user-images.githubusercontent.com/111989928/201513268-3d20f0aa-4f18-454a-b1ee-be0c102a7c36.png)
+![Screenshot 2022-11-18 at 11 00 20 PM](https://user-images.githubusercontent.com/111989928/202766648-3c287850-db28-4e70-82a4-e087def722f1.png)
+
 
 
 ###  3. Create `Error Page` if content missed or under deployment progress.
