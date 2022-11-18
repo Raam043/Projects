@@ -143,10 +143,6 @@ Output
 
 
 
-![image](https://user-images.githubusercontent.com/111989928/200833894-c7210b07-4ee5-4ad7-a900-609b87574f81.png)
-
-
-
 
 
 
