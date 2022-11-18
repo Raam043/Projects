@@ -171,10 +171,7 @@ Copy all Output and paste on Credentials for Master
 ![image](https://user-images.githubusercontent.com/111989928/200188753-d92aad4c-f660-47a3-89a9-7864702598ac.png)
 
 
-
-![image](https://user-images.githubusercontent.com/111989928/200188772-487730b2-5961-47db-806a-fe8b4366f11e.png)
-
-
+![image](https://user-images.githubusercontent.com/111989928/200188737-177e2ba2-bd7e-40d4-b754-6b0c446a1e98.png)
 
 # Option -2 for Pipeline = Create `Pipeline project`
 
