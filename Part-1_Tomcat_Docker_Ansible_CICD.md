@@ -102,6 +102,3 @@ docker stop test & docker rm -f test & docker image rm -f test & docker build -t
 docker run --name test -d -p 8090:8080 test
 ```
 
-Output
-![image](https://user-images.githubusercontent.com/111989928/199666073-f40205f3-3b5d-4b4e-a7f5-29c1b60879a7.png)
-
