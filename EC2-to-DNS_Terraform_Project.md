@@ -6,14 +6,106 @@
 
 Setup terraform configuration files on folder
 
-1 - `secret.tfvars` = IAM "Access_Key" & "Secret_Key" 
+## 1 - `terraform.tfvars` = IAM "Access_Key" & "Secret_Key" 
 
-2 - `variable.tf` = Variables
+```sh
+access_key = "abc"
+secret_key = "xyz"
+```
 
-3 - `provider.tf` = Cloud provider details with above Access & Secret keys
+## 2 - `variable.tf` = Variables
 
-4 - `main.tf` = To create EC2 instances + route 53 for DNS
+```sh
 
+variable "access_key" {}
+variable "secret_key" {}
+variable "region" {
+    default = "us-east-2"
+}
+variable "ami_id" {
+    default = {
+        us-east-2 = "ami-0beaa649c482330f7"
+        us-east-1 = "ami-097a2df4ac947655f"
+    }
+  
+}
+
+```
+
+## 3 - `provider.tf` = Cloud provider details with above Access & Secret keys
+
+```sh
+
+provider "aws" {
+    region = "${var.region}"
+    access_key = "${var.access_key}"
+    secret_key = "${var.secret_key}"
+  
+}
+```
+
+
+## 4 - `main.tf` = To create EC2 instances + route 53 for DNS
+
+```sh
+
+# Creating Linux ec2 server ----------------------------------------------------------------------------
+resource "aws_instance" "web" {
+    count = 1
+    ami = "ami-0beaa649c482330f7"
+    instance_type = "t2.micro"
+    key_name = "USIS"
+    security_groups    = ["All Traffic","default"]
+    user_data = <<-EOF
+#! /bin/bash
+yum update -y
+amazon-linux-extras install nginx1.12 -y
+service nginx start
+wget https://github.com/Raam043/Pipeline-HTML/archive/refs/heads/master.zip
+sudo unzip master.zip
+sudo mv Pipeline-HTML-master/index.html /usr/share/nginx/html/
+    EOF
+    tags = {
+    Name = "Ramesh-Linux"
+
+  }
+}
+
+# Output for Servers Public Ip addresses
+output "servers_publc_ip" {
+  value = "${aws_instance.web.*.public_ip}"
+}
+
+# Route53 Creation---------------------------------------------------------------------------------------
+#Creating Hosted Zone
+resource "aws_route53_zone" "saikrishna" {
+    name = "saikrishna.ga"
+
+    tags = {
+      Environment = "dev"
+    }
+  
+}
+
+# Generate Name servers (4 servers) ---------------------------------------------------------------------
+output "name_server" {
+    value = aws_route53_zone.saikrishna.name_servers
+}
+
+# Creating "A" record (final) ---------------------------------------------------------------------------
+resource "aws_route53_record" "www" {
+    zone_id = aws_route53_zone.saikrishna.zone_id
+    name = "www.saikrishna.ga"
+    type = "A"
+    ttl = "60"
+    records = "${aws_instance.web.*.public_ip}"
+  
+}
+
+```
+
+
+<img width="683" alt="Screenshot 2022-11-18 at 9 42 35 PM" src="https://user-images.githubusercontent.com/111989928/202750471-828360da-6bc1-4eee-8233-f503f1199b05.png">
 
 
 
