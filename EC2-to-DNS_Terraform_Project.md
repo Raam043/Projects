@@ -123,11 +123,26 @@ terraform apply -auto-approve
 <img width="911" alt="Screenshot 2022-11-18 at 9 56 11 PM" src="https://user-images.githubusercontent.com/111989928/202753290-792573e6-2153-49d5-b8cf-f93b0309aea2.png">
 
 
-## `Route53 crated and generated name 4 servers`
+
+
+
+
+
+## `Instance & Route53 crated and generated name 4 servers`
 
 <img width="902" alt="Screenshot 2022-11-18 at 9 57 09 PM" src="https://user-images.githubusercontent.com/111989928/202753502-5e3d48ae-e74d-4c16-a11e-5908fe3030a2.png">
 
+
+<img width="1272" alt="Screenshot 2022-11-18 at 10 09 11 PM" src="https://user-images.githubusercontent.com/111989928/202756408-8842f85e-c7d1-4c60-ba29-965b24e2f04d.png">
+
+
+<img width="985" alt="Screenshot 2022-11-18 at 10 12 03 PM" src="https://user-images.githubusercontent.com/111989928/202756867-826784d3-721e-40ed-a975-ae0ecbc1846a.png">
+
+
+
 ## Add name servers on `Domain name servers setting`
+
+<img width="1020" alt="Screenshot 2022-11-18 at 10 06 01 PM" src="https://user-images.githubusercontent.com/111989928/202755801-4f409155-353d-45de-b858-ac7cc6f638a9.png">
 
 
 
