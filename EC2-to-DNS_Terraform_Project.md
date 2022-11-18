@@ -147,6 +147,5 @@ terraform apply -auto-approve
 
 # Output of Project ( DNS activated and listening sucessfully) 
 
-<img width="1280" alt="Screenshot 2022-11-18 at 10 14 30 PM" src="https://user-images.githubusercontent.com/111989928/202757504-ccc84169-6ed8-4b14-863c-1c0ceaa518bd.png">
 
 
