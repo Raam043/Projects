@@ -107,5 +107,27 @@ resource "aws_route53_record" "www" {
 
 <img width="683" alt="Screenshot 2022-11-18 at 9 42 35 PM" src="https://user-images.githubusercontent.com/111989928/202750471-828360da-6bc1-4eee-8233-f503f1199b05.png">
 
+## Terraform plan and Apply
+
+```sh 
+terraform init
+terraform plan
+```
+
+If all are set go ahead for apply
+
+```sh
+terraform apply -auto-approve
+```
+
+<img width="911" alt="Screenshot 2022-11-18 at 9 56 11 PM" src="https://user-images.githubusercontent.com/111989928/202753290-792573e6-2153-49d5-b8cf-f93b0309aea2.png">
+
+
+## `Route53 crated and generated name 4 servers`
+
+<img width="902" alt="Screenshot 2022-11-18 at 9 57 09 PM" src="https://user-images.githubusercontent.com/111989928/202753502-5e3d48ae-e74d-4c16-a11e-5908fe3030a2.png">
+
+## Add name servers on `Domain name servers setting`
+
 
 
