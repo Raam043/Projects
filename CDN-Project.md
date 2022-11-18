@@ -35,7 +35,7 @@ Grant Public Access
 
 https://s3.us-east-2.amazonaws.com/ramesh.in/index.html
 
-![Screenshot 2022-11-13 at 1 59 45 PM](https://user-images.githubusercontent.com/111989928/201512904-cad267de-e5b3-407d-9449-7871ee613bb0.png)
+
 
 
 
