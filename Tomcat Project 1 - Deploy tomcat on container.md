@@ -160,7 +160,9 @@ Tomcat is running at `Server_IP:8090`
 
 
 Myapp is running at `Server_IP:8090/myapp`
-![image](https://user-images.githubusercontent.com/111989928/198837203-7a3cc60a-8d14-4521-8f48-9c68d56e47fd.png)
+
+![Screenshot 2022-11-18 at 10 57 48 PM](https://user-images.githubusercontent.com/111989928/202765813-160feb8c-92d8-4003-9a95-26eb90b1b44d.png)
+
 
 
 
