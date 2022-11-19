@@ -4,6 +4,8 @@
 
 ### Create Folder on local Desktop or Virtual machine. Install `Terraform`  👉🏻 **[Installation steps](https://github.com/Raam043/Applications-Installation/blob/cd2f64000965f8254870a7263dba5ccbcddfc407/Terraform/Terraform%20installation%20%20on%20local%20system.MD)**
 
+### Refer the repository fir terraform files 👉🏻 **[Terraform files Repo](https://github.com/Raam043/Terraform_Project_ec2-to-DNS.git)**
+
 Setup terraform configuration files on folder
 
 ## 1 - `terraform.tfvars` = IAM "Access_Key" & "Secret_Key" 
