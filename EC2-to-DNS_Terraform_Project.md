@@ -36,34 +36,21 @@ variable "ami_id" {
 
 ```sh
 
-provider "aws" {
-    region = "${var.region}"
-    access_key = "${var.access_key}"
-    secret_key = "${var.secret_key}"
-  
-}
-```
-
-
-## 4 - `main.tf` = To create EC2 instances + route 53 for DNS
-
-```sh
-
 # Creating Linux ec2 server ----------------------------------------------------------------------------
 resource "aws_instance" "web" {
     count = 1
     ami = "ami-0beaa649c482330f7"
     instance_type = "t2.micro"
-    key_name = "USIS"
+    key_name = "RAMESH"
     security_groups    = ["All Traffic","default"]
     user_data = <<-EOF
 #! /bin/bash
 yum update -y
-amazon-linux-extras install nginx1.12 -y
-service nginx start
+yum install httpd -y
+service httpd start
 wget https://github.com/Raam043/Pipeline-HTML/archive/refs/heads/master.zip
-sudo unzip master.zip
-sudo mv Pipeline-HTML-master/index.html /usr/share/nginx/html/
+unzip master.zip
+sudo mv Pipeline-HTML-master/index.html /var/www/html/
     EOF
     tags = {
     Name = "Ramesh-Linux"
@@ -97,10 +84,11 @@ resource "aws_route53_record" "www" {
     zone_id = aws_route53_zone.saikrishna.zone_id
     name = "www.saikrishna.ga"
     type = "A"
-    ttl = "60"
+    ttl = "300"
     records = "${aws_instance.web.*.public_ip}"
   
 }
+
 
 ```
 
