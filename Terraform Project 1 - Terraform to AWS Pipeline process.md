@@ -11,7 +11,7 @@ Refer the repo **[Terraform automation](https://github.com/Raam043/Git-jenkins-t
 
 Install the terraform application on terraform server
 
-Download the zip file for install teraform on server
+Download the zip file for install terraform on server
 
 https://www.terraform.io/downloads
 
