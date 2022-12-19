@@ -7,7 +7,7 @@ Prerequisition:
 1. Jenkins server
 2. Git repo with Terraform configuration files ( main.tf / test.tfvars / variables.tf)
 
-Refer the repo **[Terraform automation](https://github.com/Raam043/Git-jenkins-terraform-aws_infra)** for reference 
+Refer the repository **[Terraform automation](https://github.com/Raam043/Git-jenkins-terraform-aws_infra)** for reference 
 
 Install the terraform application on terraform server
 
