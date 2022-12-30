@@ -127,38 +127,7 @@ pipeline {
         }
         stage('Docker Image Build') {
             steps {
-                sh 'docker build -t myapp .'
-            }
-        }
-        stage('Docker Run Container') {
-            steps {
-                sh 'docker run --name myapp -d -p 80:80 myapp'
-            }
-        }
-        
-    }
-}
-```
-
-
-`Pipeline Script 2nd and continue to build jobs`
-
-```sh
-pipeline {
-    agent any
-
-    stages {
-        stage('Git Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Raam043/Test-project.git'
-            }
-        }
-        stage('Docker Image Build') {
-            steps {
-                sh 'docker stop myapp'
-                sh 'docker rm -f myapp'
-                sh 'docker image rm -f myapp'
-                sh 'docker build -t myapp .'
+                sh 'docker stop myapp & docker rm -f myapp & docker image rm -f myapp & docker build -t myapp .'
             }
         }
         stage('Docker Run Container') {
